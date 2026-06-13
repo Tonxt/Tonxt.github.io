@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lisandro Acuña — Data Engineer Trainee</title>
-  <meta name="description" content="Portfolio de Lisandro Acuña. Estudiante de Ingeniería Informática enfocado en ingeniería de datos: SQL, Python, Excel y Power BI." />
+  <title>Lisandro Acuña — Data Analyst Trainee</title>
+  <meta name="description" content="Portfolio de Lisandro Acuña. Estudiante de Ingeniería Informática enfocado en análisis de datos: SQL, Python, Excel y Power BI." />
   <meta name="theme-color" content="#0E0D0B" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Lisandro Acuña — Data Engineer Trainee" />
-  <meta property="og:description" content="Estudiante de Ingeniería Informática enfocado en ingeniería de datos: SQL, Python, Excel y Power BI. Portfolio, proyectos y contacto." />
+  <meta property="og:title" content="Lisandro Acuña — Data Analyst Trainee" />
+  <meta property="og:description" content="Estudiante de Ingeniería Informática enfocado en análisis de datos: SQL, Python, Excel y Power BI. Portfolio, proyectos y contacto." />
   <meta property="og:locale" content="es_AR" />
   <link rel="stylesheet" href="identidad/tokens.css" />
   <link rel="stylesheet" href="styles.css" />
@@ -25,11 +25,12 @@
         <span>Lisandro Acuña<span class="dot">.</span></span>
       </a>
       <nav class="nav-links" aria-label="Navegación principal">
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#estudios">Estudios</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#contacto" class="nav-cta">Contacto</a>
+        <a href="#sobre-mi"    data-i18n="nav.about">Sobre mí</a>
+        <a href="#experiencia" data-i18n="nav.exp">Experiencia</a>
+        <a href="#estudios"    data-i18n="nav.edu">Estudios</a>
+        <a href="#proyectos"   data-i18n="nav.projects">Proyectos</a>
+        <a href="#contacto" class="nav-cta" data-i18n="nav.contact">Contacto</a>
+        <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">EN</button>
       </nav>
     </div>
   </header>
@@ -38,23 +39,23 @@
   <main>
     <section id="inicio" class="hero">
       <div class="hero-inner">
-        <!-- Copy editable: ajustá rol y descripción a tu perfil real -->
         <p class="kicker hero-kicker">Portfolio · 2026</p>
 
         <h1 class="hero-name">Lisandro Acuña<span class="dot">.</span></h1>
 
-        <p class="hero-role">Data Engineer · Trainee</p>
+        <p class="hero-role">Data Analyst · Trainee</p>
 
-        <p class="hero-desc">
-          Estudiante de Ingeniería Informática enfocado en el mundo de los datos:
-          construyo pipelines, consultas y dashboards que convierten información
-          cruda en decisiones. Aprendo rápido, documento mejor, y busco mi primera
-          oportunidad para crecer como ingeniero de datos.
+        <p class="hero-desc" data-i18n="hero.desc">
+          Estudiante de Ingeniería Informática apasionado por los datos: los
+          analizo, escribo consultas SQL y construyo dashboards que convierten
+          información cruda en decisiones. Aprendo rápido, documento mejor, y busco
+          mi primera oportunidad como analista de datos, con la mira puesta en
+          crecer hacia la ingeniería de datos.
         </p>
 
         <div class="hero-cta">
-          <a href="#proyectos" class="btn">Ver proyectos</a>
-          <a href="#cv" class="btn btn-ghost">Descargar CV</a>
+          <a href="#proyectos" class="btn" data-i18n="hero.cta.projects">Ver proyectos</a>
+          <a href="#cv" class="btn btn-ghost" data-i18n="hero.cta.cv">Descargar CV</a>
         </div>
 
         <ul class="hero-tags" aria-label="Herramientas">
@@ -66,7 +67,7 @@
 
         <p class="hero-status">
           <span class="status-dot" aria-hidden="true"></span>
-          Abierto a oportunidades trainee · junior
+          <span data-i18n="hero.status">Abierto a oportunidades trainee · junior</span>
         </p>
       </div>
     </section>
@@ -75,10 +76,10 @@
     <section id="sobre-mi" class="section">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">Sobre mí / 01</p>
-          <h2 class="section-title">Curiosidad con método.</h2>
+          <p class="kicker" data-i18n="about.kicker">Sobre mí / 01</p>
+          <h2 class="section-title" data-i18n="about.title">Curiosidad con método.</h2>
         </div>
-        <p class="about-text">
+        <p class="about-text" data-i18n="about.body">
           Soy Lisandro, estudiante de primer año de Ingeniería Informática en la
           UADE. Lo que más me atrapa del mundo de los datos es la estadística:
           esa mezcla de números y preguntas que explica por qué pasan las cosas.
@@ -92,16 +93,16 @@
     <section id="experiencia" class="section">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">Experiencia / 02</p>
-          <h2 class="section-title">Aprender haciendo.</h2>
+          <p class="kicker" data-i18n="exp.kicker">Experiencia / 02</p>
+          <h2 class="section-title" data-i18n="exp.title">Aprender haciendo.</h2>
         </div>
         <ul class="timeline">
           <li class="timeline-item">
-            <span class="timeline-date">2026 — Actual</span>
+            <span class="timeline-date" data-i18n="exp.item1.date">2026 — Actual</span>
             <div>
-              <h3 class="timeline-role">Proyectos personales de datos</h3>
-              <p class="timeline-org">Independiente</p>
-              <p class="timeline-desc">
+              <h3 class="timeline-role" data-i18n="exp.item1.role">Proyectos personales de datos</h3>
+              <p class="timeline-org" data-i18n="exp.item1.org">Independiente</p>
+              <p class="timeline-desc" data-i18n="exp.item1.desc">
                 Diseño y desarrollo de dos proyectos propios de punta a punta —
                 uno publicado y otro en curso — aplicando Python, Pandas y
                 visualización de datos.
@@ -111,9 +112,9 @@
           <li class="timeline-item">
             <span class="timeline-date">2026</span>
             <div>
-              <h3 class="timeline-role">Competencia de programación en Python</h3>
+              <h3 class="timeline-role" data-i18n="exp.item2.role">Competencia de programación en Python</h3>
               <p class="timeline-org">UADE</p>
-              <p class="timeline-desc">
+              <p class="timeline-desc" data-i18n="exp.item2.desc">
                 Desarrollo de proyectos en equipo y contra reloj: resolución de
                 problemas, lógica y colaboración sobre código real.
               </p>
@@ -127,23 +128,23 @@
     <section id="estudios" class="section">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">Estudios / 03</p>
-          <h2 class="section-title">Formación.</h2>
+          <p class="kicker" data-i18n="edu.kicker">Estudios / 03</p>
+          <h2 class="section-title" data-i18n="edu.title">Formación.</h2>
         </div>
         <ul class="timeline">
           <li class="timeline-item">
-            <span class="timeline-date">2026 — En curso</span>
+            <span class="timeline-date" data-i18n="edu.item1.date">2026 — En curso</span>
             <div>
-              <h3 class="timeline-role">Ingeniería Informática</h3>
+              <h3 class="timeline-role" data-i18n="edu.item1.role">Ingeniería Informática</h3>
               <p class="timeline-org">UADE — Universidad Argentina de la Empresa</p>
-              <p class="timeline-desc">
+              <p class="timeline-desc" data-i18n="edu.item1.desc">
                 Primer año. Foco personal en datos, estadística y programación.
               </p>
             </div>
           </li>
         </ul>
         <div class="certs">
-          <h3 class="certs-title">Certificaciones</h3>
+          <h3 class="certs-title" data-i18n="edu.certs.title">Certificaciones</h3>
           <ul class="certs-list">
             <li class="cert-item">
               <div>
@@ -156,9 +157,9 @@
             </li>
             <li class="cert-item">
               <div>
-                <p class="cert-name">Introducción a la programación con Python</p>
+                <p class="cert-name" data-i18n="edu.certs.python.name">Introducción a la programación con Python</p>
                 <p class="cert-issuer">Santander Open Academy</p>
-                <p class="cert-serial">N° de serie: OA-2026-0222002281478</p>
+                <p class="cert-serial" data-i18n="edu.certs.python.serial">N° de serie: OA-2026-0222002281478</p>
               </div>
               <span class="cert-date">Feb. 2026</span>
             </li>
@@ -180,20 +181,21 @@
     <section id="proyectos" class="section">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">Proyectos / 04</p>
-          <h2 class="section-title">Cosas que construí.</h2>
-          <p class="section-lead">
+          <p class="kicker" data-i18n="proj.kicker">Proyectos / 04</p>
+          <h2 class="section-title" data-i18n="proj.title">Cosas que construí.</h2>
+          <p class="section-lead" data-i18n="proj.lead">
             Proyectos personales y académicos. El código vive en GitHub.
           </p>
         </div>
         <div class="projects-grid">
+
           <article class="card project-card">
             <div class="project-top">
-              <span class="kicker">Proyecto / 01</span>
-              <span class="badge badge-done">Terminado</span>
+              <span class="kicker" data-i18n="proj.p1.kicker">Proyecto / 01</span>
+              <span class="badge badge-done" data-i18n="proj.p1.badge">Terminado</span>
             </div>
-            <h3 class="project-title">Análisis de e-commerce · Olist</h3>
-            <p class="project-desc">
+            <h3 class="project-title" data-i18n="proj.p1.title">Análisis de e-commerce · Olist</h3>
+            <p class="project-desc" data-i18n="proj.p1.desc">
               Análisis exploratorio de más de 99.000 órdenes del e-commerce
               brasileño Olist (2016–2018): evolución de ingresos, categorías
               más vendidas y distribución regional de las ventas.
@@ -204,33 +206,32 @@
               <li class="tag">Matplotlib</li>
               <li class="tag">Jupyter</li>
             </ul>
-            <a class="project-link" href="https://github.com/Tonxt/olist-ecommerce-analysis" target="_blank" rel="noopener">Ver en GitHub →</a>
+            <a class="project-link" href="https://github.com/Tonxt/olist-ecommerce-analysis" target="_blank" rel="noopener" data-i18n="proj.github">Ver en GitHub →</a>
           </article>
 
           <article class="card project-card">
             <div class="project-top">
-              <span class="kicker">Proyecto / 02</span>
-              <span class="badge badge-wip">En curso</span>
+              <span class="kicker" data-i18n="proj.p2.kicker">Proyecto / 02</span>
+              <span class="badge badge-wip" data-i18n="proj.p2.badge">En curso</span>
             </div>
             <h3 class="project-title">Argentina Dólar Tracker</h3>
-            <!-- TODO: afinar descripción cuando Lisandro pase el detalle del proyecto -->
-            <p class="project-desc">
+            <p class="project-desc" data-i18n="proj.p2.desc">
               Herramienta en Python para el seguimiento de la cotización del
               dólar en Argentina. En desarrollo activo.
             </p>
             <ul class="project-tags" aria-label="Tecnologías">
               <li class="tag">Python</li>
             </ul>
-            <a class="project-link" href="https://github.com/Tonxt/argentina-dolar-tracker" target="_blank" rel="noopener">Ver en GitHub →</a>
+            <a class="project-link" href="https://github.com/Tonxt/argentina-dolar-tracker" target="_blank" rel="noopener" data-i18n="proj.github">Ver en GitHub →</a>
           </article>
 
           <article class="card project-card">
             <div class="project-top">
-              <span class="kicker">Proyecto / 03</span>
-              <span class="badge badge-done">Académico</span>
+              <span class="kicker" data-i18n="proj.p3.kicker">Proyecto / 03</span>
+              <span class="badge badge-done" data-i18n="proj.p3.badge">Académico</span>
             </div>
-            <h3 class="project-title">Competencia Python · UADE</h3>
-            <p class="project-desc">
+            <h3 class="project-title" data-i18n="proj.p3.title">Competencia Python · UADE</h3>
+            <p class="project-desc" data-i18n="proj.p3.desc">
               Proyecto desarrollado en equipo durante la competencia de
               programación de la universidad.
             </p>
@@ -238,6 +239,7 @@
               <li class="tag">Python</li>
             </ul>
           </article>
+
         </div>
       </div>
     </section>
@@ -245,14 +247,14 @@
     <!-- ============ Contacto ============ -->
     <section id="contacto" class="section">
       <div class="container contact-inner">
-        <p class="kicker">Contacto / 05</p>
-        <h2 class="section-title">Hablemos.</h2>
-        <p class="section-lead">
+        <p class="kicker" data-i18n="contact.kicker">Contacto / 05</p>
+        <h2 class="section-title" data-i18n="contact.title">Hablemos.</h2>
+        <p class="section-lead" data-i18n="contact.lead">
           ¿Tenés una oportunidad trainee o junior en datos?
           Me encantaría escucharla.
         </p>
         <div class="contact-cta">
-          <a class="btn" href="mailto:lisandrow29@gmail.com">Escribime</a>
+          <a class="btn btn-ghost" href="mailto:lisandrow29@gmail.com" data-i18n="contact.btn.email">Escribime</a>
           <a class="btn btn-ghost" href="https://github.com/Tonxt" target="_blank" rel="noopener">GitHub</a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/lisandro-acu%C3%B1a-3947b129b/" target="_blank" rel="noopener">LinkedIn</a>
         </div>

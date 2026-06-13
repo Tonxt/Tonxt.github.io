@@ -1,6 +1,9 @@
 # Configuración local de Claude Code
 .claude/
 
+# CV con datos personales (teléfono/email) — no publicar en el repo público
+cv/
+
 # Sistema
 Thumbs.db
 desktop.ini
