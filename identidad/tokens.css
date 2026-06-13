@@ -160,7 +160,7 @@ a:hover { color: var(--accent-hover); }
   cursor: pointer;
   transition: background var(--dur) var(--ease-out);
 }
-.btn:hover { background: var(--accent-hover); }
+.btn:hover { background: var(--accent-hover); color: var(--text-on-accent); }
 
 /* Botón secundario (ghost) */
 .btn-ghost {
@@ -168,7 +168,7 @@ a:hover { color: var(--accent-hover); }
   border: 1px solid var(--accent-line);
   color: var(--accent);
 }
-.btn-ghost:hover { background: var(--accent-soft); }
+.btn-ghost:hover { background: var(--accent-soft); color: var(--accent); }
 
 /* Tarjeta */
 .card {
