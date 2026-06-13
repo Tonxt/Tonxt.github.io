@@ -1,8 +1,7 @@
-// Animación de entrada de secciones (manual de identidad, sección 9):
-// fade + slide-up sutil al entrar en viewport. El estado inicial oculto
-// solo se aplica vía CSS bajo prefers-reduced-motion: no-preference,
-// así el contenido nunca queda invisible si el JS falla o el usuario
-// pide menos movimiento.
+/* Animación de entrada de secciones: fade + slide-up sutil al entrar en viewport. El estado inicial oculto
+solo se aplica vía CSS bajo prefers-reduced-motion: no-preference, así el contenido nunca queda invisible 
+si el JS falla o el usuario pide menos movimiento.
+*/
 const observer = new IntersectionObserver(
   (entries) => {
     for (const entry of entries) {
