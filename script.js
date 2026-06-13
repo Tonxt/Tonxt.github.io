@@ -7,7 +7,7 @@ const t = {
     "nav.projects": "Proyectos",
     "nav.contact":  "Contacto",
 
-    "hero.desc":         "Estudiante de Ingeniería Informática enfocado en el mundo de los datos: construyo pipelines, consultas y dashboards que convierten información cruda en decisiones. Aprendo rápido, documento mejor, y busco mi primera oportunidad para crecer como ingeniero de datos.",
+    "hero.desc":         "Estudiante de Ingeniería Informática apasionado por los datos: los analizo, escribo consultas SQL y construyo dashboards que convierten información cruda en decisiones. Aprendo rápido, documento mejor, y busco mi primera oportunidad como analista de datos, con la mira puesta en crecer hacia la ingeniería de datos.",
     "hero.cta.projects": "Ver proyectos",
     "hero.cta.cv":       "Descargar CV",
     "hero.status":       "Abierto a oportunidades trainee · junior",
@@ -63,7 +63,7 @@ const t = {
     "nav.projects": "Projects",
     "nav.contact":  "Contact",
 
-    "hero.desc":         "Computer Engineering student focused on the world of data: I build pipelines, queries, and dashboards that turn raw information into decisions. I learn fast, document well, and I'm looking for my first opportunity to grow as a data engineer.",
+    "hero.desc":         "Computer Engineering student passionate about data: I analyze it, write SQL queries, and build dashboards that turn raw information into decisions. I learn fast, document well, and I'm looking for my first opportunity as a data analyst, with my sights set on growing toward data engineering.",
     "hero.cta.projects": "View projects",
     "hero.cta.cv":       "Download CV",
     "hero.status":       "Open to trainee · junior opportunities",
@@ -123,10 +123,7 @@ function applyLang(lang) {
   });
 
   document.documentElement.lang = lang;
-  document.title =
-    lang === "en"
-      ? "Lisandro Acuña — Data Engineer Trainee"
-      : "Lisandro Acuña — Data Engineer Trainee";
+  document.title = "Lisandro Acuña — Data Analyst Trainee";
 
   const btn = document.getElementById("lang-toggle");
   if (btn) btn.textContent = lang === "es" ? "EN" : "ES";
