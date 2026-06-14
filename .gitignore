@@ -4,6 +4,9 @@
 # CV con datos personales (teléfono/email) — no publicar en el repo público
 cv/
 
+# Assets de marca para redes (LinkedIn, etc.) — no son parte del sitio
+marca/
+
 # Sistema
 Thumbs.db
 desktop.ini
