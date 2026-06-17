@@ -128,6 +128,9 @@ function applyLang(lang) {
   const btn = document.getElementById("lang-toggle");
   if (btn) btn.textContent = lang === "es" ? "EN" : "ES";
 
+  const cvLink = document.getElementById("cv-link");
+  if (cvLink) cvLink.href = "assets/cv-lisandro-acuna-" + lang + ".pdf";
+
   currentLang = lang;
   localStorage.setItem("lang", lang);
 }
