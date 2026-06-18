@@ -8,25 +8,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  /* ---------- Color · Neutros (tema claro) ---------- */
-  --bg:               #FBFAF7;
-  --surface:          #F3F1EA;
-  --surface-raised:   #ECE9E0;
-  --border:           #E2DDD2;
-  --border-strong:    #CCC5B6;
+  /* ---------- Color · Neutros (tema claro, frío azulado) ---------- */
+  --bg:               #F6F8FC;
+  --surface:          #EAF1FB;
+  --surface-raised:   #DFE9F8;
+  --border:           #D4E0F0;
+  --border-strong:    #B9C9E2;
 
   /* ---------- Color · Texto ---------- */
-  --text:             #1E1A15;
-  --text-secondary:   #5B5448;
-  --text-muted:       #8C8475;
+  --text:             #15192A;
+  --text-secondary:   #4A5468;
+  --text-muted:       #7E889C;
   --text-on-accent:   #FFFFFF;
 
-  /* ---------- Color · Acento (violeta amatista) ---------- */
-  --accent:           #8160CC;
-  --accent-hover:     #9C82DC;
-  --accent-press:     #6E4FB0;
-  --accent-soft:      rgba(129, 96, 204, .12);
-  --accent-line:      rgba(129, 96, 204, .30);
+  /* ---------- Color · Acento (azul cobalto) ---------- */
+  --accent:           #2547D0;
+  --accent-hover:     #1D3BB5;
+  --accent-press:     #18309A;
+  --accent-soft:      rgba(37, 71, 208, .10);
+  --accent-line:      rgba(37, 71, 208, .28);
 
   /* ---------- Color · Semánticos (uso moderado) ---------- */
   --success:          #6FA06A;
@@ -85,9 +85,9 @@
   --radius-pill:      999px;
 
   /* ---------- Sombras (sutiles, sobre fondo claro) ---------- */
-  --shadow-sm:        0 1px 2px rgba(31, 26, 21, .06);
-  --shadow-md:        0 6px 20px rgba(31, 26, 21, .08);
-  --shadow-lg:        0 16px 40px rgba(31, 26, 21, .12);
+  --shadow-sm:        0 1px 2px rgba(21, 25, 42, .06);
+  --shadow-md:        0 6px 20px rgba(21, 25, 42, .08);
+  --shadow-lg:        0 16px 40px rgba(21, 25, 42, .12);
 
   /* ---------- Movimiento ---------- */
   --ease-out:         cubic-bezier(0.16, 1, 0.3, 1);
@@ -190,9 +190,10 @@ a:hover { color: var(--accent-hover); }
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
-  color: var(--text-secondary);
+  color: var(--accent);
+  background: var(--accent-soft);
   padding: 6px 12px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--accent-line);
   border-radius: var(--radius-pill);
 }
 

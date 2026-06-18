@@ -21,7 +21,7 @@ body { min-height: 100vh; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(251, 250, 247, 0.80);
+  background: rgba(246, 248, 252, 0.82);
   backdrop-filter: saturate(140%) blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -330,7 +330,7 @@ body { min-height: 100vh; }
 .project-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: var(--space-2);
 }
 

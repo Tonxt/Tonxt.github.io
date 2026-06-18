@@ -13,11 +13,11 @@ const t = {
     "hero.status":       "Abierto a oportunidades trainee · junior",
 
     "about.kicker": "Sobre mí / 01",
-    "about.title":  "Curiosidad con método.",
+    "about.title":  "Curiosidad con método",
     "about.body":   "Soy Lisandro, estudiante de primer año de Ingeniería Informática en la UADE. Lo que más me atrapa del mundo de los datos es la estadística: esa mezcla de números y preguntas que explica por qué pasan las cosas. Hoy estoy construyendo mis bases con SQL, Python, Excel y Power BI, y cada proyecto que encaro es una excusa para aprender algo nuevo.",
 
     "exp.kicker":      "Experiencia / 02",
-    "exp.title":       "Aprender haciendo.",
+    "exp.title":       "Aprender haciendo",
     "exp.item1.date":  "2026 — Actual",
     "exp.item1.role":  "Proyectos personales de datos",
     "exp.item1.org":   "Independiente",
@@ -26,7 +26,7 @@ const t = {
     "exp.item2.desc":  "Desarrollo de proyectos en equipo y contra reloj: resolución de problemas, lógica y colaboración sobre código real.",
 
     "edu.kicker":           "Estudios / 03",
-    "edu.title":            "Formación.",
+    "edu.title":            "Formación",
     "edu.item1.date":       "2026 — En curso",
     "edu.item1.role":       "Ingeniería Informática",
     "edu.item1.desc":       "Primer año. Foco personal en datos, estadística y programación.",
@@ -35,7 +35,7 @@ const t = {
     "edu.certs.python.serial": "N° de serie: OA-2026-0222002281478",
 
     "proj.kicker":    "Proyectos / 04",
-    "proj.title":     "Cosas que construí.",
+    "proj.title":     "Cosas que construí",
     "proj.lead":      "Proyectos personales y académicos. El código vive en GitHub.",
     "proj.github":    "Ver en GitHub →",
     "proj.p1.kicker": "Proyecto / 01",
@@ -51,7 +51,7 @@ const t = {
     "proj.p3.desc":   "Proyecto desarrollado en equipo durante la competencia de programación de la universidad.",
 
     "contact.kicker":    "Contacto / 05",
-    "contact.title":     "Hablemos.",
+    "contact.title":     "Hablemos",
     "contact.lead":      "¿Tenés una oportunidad trainee o junior en datos? Me encantaría escucharla.",
     "contact.btn.email": "Escribime",
   },
@@ -69,11 +69,11 @@ const t = {
     "hero.status":       "Open to trainee · junior opportunities",
 
     "about.kicker": "About me / 01",
-    "about.title":  "Curiosity with method.",
+    "about.title":  "Curiosity with method",
     "about.body":   "I'm Lisandro, a first-year Computer Engineering student at UADE. What draws me most to the world of data is statistics: that blend of numbers and questions that explains why things happen. I'm currently building my foundations with SQL, Python, Excel, and Power BI — and every project I take on is an excuse to learn something new.",
 
     "exp.kicker":      "Experience / 02",
-    "exp.title":       "Learning by doing.",
+    "exp.title":       "Learning by doing",
     "exp.item1.date":  "2026 — Present",
     "exp.item1.role":  "Personal data projects",
     "exp.item1.org":   "Independent",
@@ -82,7 +82,7 @@ const t = {
     "exp.item2.desc":  "Team-based project development under time constraints: problem solving, logic, and real-code collaboration.",
 
     "edu.kicker":           "Education / 03",
-    "edu.title":            "Education.",
+    "edu.title":            "Education",
     "edu.item1.date":       "2026 — In progress",
     "edu.item1.role":       "Computer Engineering",
     "edu.item1.desc":       "First year. Personal focus on data, statistics, and programming.",
@@ -91,7 +91,7 @@ const t = {
     "edu.certs.python.serial": "Serial No.: OA-2026-0222002281478",
 
     "proj.kicker":    "Projects / 04",
-    "proj.title":     "Things I built.",
+    "proj.title":     "Things I built",
     "proj.lead":      "Personal and academic projects. Code lives on GitHub.",
     "proj.github":    "View on GitHub →",
     "proj.p1.kicker": "Project / 01",
@@ -107,7 +107,7 @@ const t = {
     "proj.p3.desc":   "Team project developed during the university programming competition.",
 
     "contact.kicker":    "Contact / 05",
-    "contact.title":     "Let's talk.",
+    "contact.title":     "Let's talk",
     "contact.lead":      "Do you have a trainee or junior opportunity in data? I'd love to hear about it.",
     "contact.btn.email": "Write to me",
   }
