@@ -21,7 +21,7 @@ body { min-height: 100vh; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(246, 248, 252, 0.82);
+  background: rgba(20, 21, 25, 0.82);
   backdrop-filter: saturate(140%) blur(10px);
   border-bottom: 1px solid var(--border);
 }
