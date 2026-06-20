@@ -12,11 +12,9 @@ const t = {
     "hero.cta.cv":       "Descargar CV",
     "hero.status":       "Abierto a oportunidades trainee · junior",
 
-    "about.kicker": "Sobre mí / 01",
     "about.title":  "Curiosidad con método",
     "about.body":   "Soy Lisandro, estudiante de primer año de Ingeniería Informática en la UADE. Lo que más me atrapa del mundo de los datos es la estadística: esa mezcla de números y preguntas que explica por qué pasan las cosas. Hoy estoy construyendo mis bases con SQL, Python, Excel y Power BI, y cada proyecto que encaro es una excusa para aprender algo nuevo.",
 
-    "exp.kicker":      "Experiencia / 02",
     "exp.title":       "Aprender haciendo",
     "exp.item1.date":  "2026 — Actual",
     "exp.item1.role":  "Proyectos personales de datos",
@@ -25,7 +23,6 @@ const t = {
     "exp.item2.role":  "Competencia de programación en Python",
     "exp.item2.desc":  "Desarrollo de proyectos en equipo y contra reloj: resolución de problemas, lógica y colaboración sobre código real.",
 
-    "edu.kicker":           "Estudios / 03",
     "edu.title":            "Formación",
     "edu.item1.date":       "2026 — En curso",
     "edu.item1.role":       "Ingeniería Informática",
@@ -34,24 +31,19 @@ const t = {
     "edu.certs.python.name":   "Introducción a la programación con Python",
     "edu.certs.python.serial": "N° de serie: OA-2026-0222002281478",
 
-    "proj.kicker":    "Proyectos / 04",
     "proj.title":     "Cosas que construí",
     "proj.lead":      "Proyectos personales y académicos. El código vive en GitHub.",
     "proj.github":    "Ver en GitHub →",
-    "proj.p1.kicker": "Proyecto / 01",
     "proj.p1.badge":  "Terminado",
     "proj.p1.title":  "Análisis de e-commerce · Olist",
     "proj.p1.desc":   "Análisis exploratorio de más de 99.000 órdenes del e-commerce brasileño Olist (2016–2018): evolución de ingresos, categorías más vendidas y distribución regional de las ventas.",
-    "proj.p2.kicker": "Proyecto / 02",
     "proj.p2.badge":  "Terminado",
     "proj.p2.desc":   "Pipeline ETL automatizado que monitorea 7 cotizaciones del dólar en Argentina (oficial, blue, MEP, CCL, cripto, mayorista y tarjeta): extracción diaria desde una API pública, almacenamiento en SQLite y un dashboard interactivo en Streamlit con análisis de tendencias.",
     "proj.p2.demo":   "Ver dashboard ↗",
-    "proj.p3.kicker": "Proyecto / 03",
     "proj.p3.badge":  "Académico",
     "proj.p3.title":  "Competencia Python · UADE",
     "proj.p3.desc":   "Proyecto desarrollado en equipo durante la competencia de programación de la universidad.",
 
-    "contact.kicker":    "Contacto / 05",
     "contact.title":     "Hablemos",
     "contact.lead":      "¿Tenés una oportunidad trainee o junior en datos? Me encantaría escucharla.",
     "contact.btn.email": "Escribime",
@@ -69,11 +61,9 @@ const t = {
     "hero.cta.cv":       "Download CV",
     "hero.status":       "Open to trainee · junior opportunities",
 
-    "about.kicker": "About me / 01",
     "about.title":  "Curiosity with method",
     "about.body":   "I'm Lisandro, a first-year Computer Engineering student at UADE. What draws me most to the world of data is statistics: that blend of numbers and questions that explains why things happen. I'm currently building my foundations with SQL, Python, Excel, and Power BI — and every project I take on is an excuse to learn something new.",
 
-    "exp.kicker":      "Experience / 02",
     "exp.title":       "Learning by doing",
     "exp.item1.date":  "2026 — Present",
     "exp.item1.role":  "Personal data projects",
@@ -82,7 +72,6 @@ const t = {
     "exp.item2.role":  "Python Programming Competition",
     "exp.item2.desc":  "Team-based project development under time constraints: problem solving, logic, and real-code collaboration.",
 
-    "edu.kicker":           "Education / 03",
     "edu.title":            "Education",
     "edu.item1.date":       "2026 — In progress",
     "edu.item1.role":       "Computer Engineering",
@@ -91,24 +80,19 @@ const t = {
     "edu.certs.python.name":   "Introduction to Python Programming",
     "edu.certs.python.serial": "Serial No.: OA-2026-0222002281478",
 
-    "proj.kicker":    "Projects / 04",
     "proj.title":     "Things I built",
     "proj.lead":      "Personal and academic projects. Code lives on GitHub.",
     "proj.github":    "View on GitHub →",
-    "proj.p1.kicker": "Project / 01",
     "proj.p1.badge":  "Done",
     "proj.p1.title":  "E-Commerce Analysis · Olist",
     "proj.p1.desc":   "Exploratory analysis of 99,000+ orders from Brazilian e-commerce platform Olist (2016–2018): revenue trends, top-selling categories, and regional sales distribution.",
-    "proj.p2.kicker": "Project / 02",
     "proj.p2.badge":  "Done",
     "proj.p2.desc":   "Automated ETL pipeline that monitors 7 USD exchange rates in Argentina (official, blue, MEP, CCL, crypto, wholesale, and card): daily extraction from a public API, SQLite storage, and an interactive Streamlit dashboard with trend analysis.",
     "proj.p2.demo":   "View dashboard ↗",
-    "proj.p3.kicker": "Project / 03",
     "proj.p3.badge":  "Academic",
     "proj.p3.title":  "Python Competition · UADE",
     "proj.p3.desc":   "Team project developed during the university programming competition.",
 
-    "contact.kicker":    "Contact / 05",
     "contact.title":     "Let's talk",
     "contact.lead":      "Do you have a trainee or junior opportunity in data? I'd love to hear about it.",
     "contact.btn.email": "Write to me",
@@ -152,15 +136,30 @@ const observer = new IntersectionObserver(
 
 document.addEventListener("DOMContentLoaded", () => {
   // Toggle de idioma
-  const btn = document.getElementById("lang-toggle");
-  if (btn) {
-    btn.addEventListener("click", () => {
+  const langBtn = document.getElementById("lang-toggle");
+  if (langBtn) {
+    langBtn.addEventListener("click", () => {
       applyLang(currentLang === "es" ? "en" : "es");
     });
   }
-
-  // Aplicar idioma guardado
   applyLang(currentLang);
+
+  // Menú mobile (hamburguesa)
+  const navToggle = document.getElementById("nav-toggle");
+  const navLinks = document.getElementById("primary-nav");
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    // Cerrar el menú al tocar un enlace de navegación
+    navLinks.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
 
   // Animaciones de entrada
   document.querySelectorAll(".hero-inner, .section .container").forEach((el) => {

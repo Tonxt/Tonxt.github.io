@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página no encontrada — Lisandro Acuña</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#141519" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="identidad/tokens.css?v=9" />
+  <style>
+    body {
+      margin: 0; min-height: 100vh;
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      background: var(--bg); color: var(--text);
+      font-family: var(--font-sans); padding: 2rem;
+    }
+    .code {
+      font-family: var(--font-mono); color: var(--accent);
+      font-size: var(--text-sm); letter-spacing: 0.14em; text-transform: uppercase;
+      margin: 0;
+    }
+    h1 {
+      font-family: var(--font-display); font-weight: 500;
+      font-size: clamp(2rem, 8vw, 3.75rem); letter-spacing: var(--tracking-tight);
+      margin: 0.75rem 0 0.5rem;
+    }
+    p.msg { color: var(--text-secondary); margin: 0 0 2rem; }
+    a.home {
+      display: inline-block; font-family: var(--font-sans); font-weight: 500;
+      background: var(--accent); color: var(--text-on-accent);
+      padding: 12px 22px; border-radius: var(--radius-md); text-decoration: none;
+    }
+    a.home:hover { background: var(--accent-hover); }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="code">Error 404</p>
+    <h1>Página no encontrada</h1>
+    <p class="msg">La página que buscás no existe o se movió.</p>
+    <a class="home" href="/">Volver al inicio</a>
+  </main>
+</body>
+</html>
