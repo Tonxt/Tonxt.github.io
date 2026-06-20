@@ -378,6 +378,13 @@ body { min-height: 100vh; }
   letter-spacing: 0.02em;
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
 /* ---------------- Contacto ---------------- */
 .contact-inner {
   text-align: center;
