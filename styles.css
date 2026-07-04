@@ -7,6 +7,30 @@ html { scroll-behavior: smooth; }
 
 body { min-height: 100vh; }
 
+/* Accesibilidad: saltar al contenido (visible al navegar con teclado) */
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -60px;
+  z-index: 100;
+  background: var(--accent);
+  color: var(--text-on-accent);
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  text-decoration: none;
+  transition: top var(--dur-fast) var(--ease-out);
+}
+.skip-link:focus { top: 8px; }
+
+/* Íconos SVG inline */
+.icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 .container,
 .nav-inner,
 .hero-inner {
@@ -70,7 +94,8 @@ body { min-height: 100vh; }
   letter-spacing: 0.02em;
   color: var(--text-secondary);
 }
-.nav-links a:hover { color: var(--accent); }
+.nav-links a:hover,
+.nav-links a.active { color: var(--accent); }
 
 .nav-cta {
   padding: 8px 16px;
@@ -412,12 +437,34 @@ body { min-height: 100vh; }
   gap: var(--space-3);
   margin-top: var(--space-6);
 }
-.contact-cta .btn { text-decoration: none; display: inline-flex; align-items: center; }
+.contact-cta .btn { text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
 
 .contact-email {
   margin: var(--space-5) 0 0;
   font-family: var(--font-mono);
   font-size: var(--text-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.copy-btn:hover { color: var(--accent); }
+.copy-btn.copied { color: var(--success); }
+
+.copy-feedback {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--success);
 }
 
 /* ---------------- Footer ---------------- */
@@ -448,6 +495,35 @@ body { min-height: 100vh; }
   letter-spacing: 0.04em;
   color: var(--text-muted);
 }
+
+/* ---------------- Botón volver arriba ---------------- */
+.to-top {
+  position: fixed;
+  right: var(--space-5);
+  bottom: var(--space-5);
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity var(--dur) var(--ease-out),
+              transform var(--dur) var(--ease-out),
+              visibility var(--dur),
+              color var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out);
+}
+.to-top.visible { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { color: var(--accent); border-color: var(--accent-line); }
 
 /* ---------------- Animación de entrada ---------------- */
 @media (prefers-reduced-motion: no-preference) {

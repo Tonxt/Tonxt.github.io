@@ -166,4 +166,52 @@ document.addEventListener("DOMContentLoaded", () => {
     el.classList.add("reveal");
     observer.observe(el);
   });
+
+  // Scroll-spy: resaltar en el navbar el enlace de la sección visible
+  const navMap = {};
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach((a) => {
+    navMap[a.getAttribute("href").slice(1)] = a;
+  });
+  const spy = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          Object.values(navMap).forEach((a) => a.classList.remove("active"));
+          if (navMap[e.target.id]) navMap[e.target.id].classList.add("active");
+        }
+      });
+    },
+    { rootMargin: "-45% 0px -50% 0px" }
+  );
+  document.querySelectorAll("main section[id]").forEach((s) => spy.observe(s));
+
+  // Copiar email al portapapeles con feedback
+  const copyBtn = document.getElementById("copy-email");
+  const copyFeedback = document.getElementById("copy-feedback");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText("lisandrow29@gmail.com");
+        copyBtn.classList.add("copied");
+        if (copyFeedback) copyFeedback.textContent = currentLang === "es" ? "¡Copiado!" : "Copied!";
+        setTimeout(() => {
+          copyBtn.classList.remove("copied");
+          if (copyFeedback) copyFeedback.textContent = "";
+        }, 2000);
+      } catch (err) {
+        /* Clipboard no disponible */
+      }
+    });
+  }
+
+  // Botón volver arriba
+  const toTop = document.getElementById("to-top");
+  if (toTop) {
+    window.addEventListener(
+      "scroll",
+      () => { toTop.classList.toggle("visible", window.scrollY > 600); },
+      { passive: true }
+    );
+    toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  }
 });
