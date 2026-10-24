@@ -26,9 +26,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
 
-  <link rel="stylesheet" href="identidad/tokens.css?v=12" />
-  <link rel="stylesheet" href="styles.css?v=12" />
-  <script src="script.js?v=12" defer></script>
+  <link rel="stylesheet" href="identidad/tokens.css?v=13" />
+  <link rel="stylesheet" href="styles.css?v=13" />
+  <script src="script.js?v=13" defer></script>
 
   <!-- Datos estructurados (SEO) -->
   <script type="application/ld+json">
@@ -136,12 +136,12 @@
           <li class="timeline-item">
             <span class="timeline-date" data-i18n="exp.item1.date">2026 — Actual</span>
             <div>
-              <h3 class="timeline-role" data-i18n="exp.item1.role">Proyectos personales de datos</h3>
+              <h3 class="timeline-role" data-i18n="exp.item1.role">Proyectos personales de backend y datos</h3>
               <p class="timeline-org" data-i18n="exp.item1.org">Independiente</p>
               <p class="timeline-desc" data-i18n="exp.item1.desc">
-                Diseño y desarrollo de dos proyectos propios de punta a punta —
-                un análisis de datos y un pipeline automatizado que consume una API,
-                persiste en SQLite y se publica en la web — aplicando Python y SQL.
+                Diseño y dirección de SimpleStock, un sistema de caja y stock para kioscos
+                (Java, Spring Boot, SQLite, React) con un piloto real, y desarrollo de punta a punta de dos
+                proyectos de datos en Python y SQL: un análisis y un pipeline automatizado que consume una API.
               </p>
             </div>
           </li>
@@ -218,10 +218,40 @@
         <div class="section-head">
           <h2 class="section-title" data-i18n="proj.title">Cosas que construí</h2>
           <p class="section-lead" data-i18n="proj.lead">
-            Proyectos personales y académicos. El código vive en GitHub.
+            Proyectos personales y académicos. El código vive en GitHub, salvo SimpleStock, que es privado.
           </p>
         </div>
         <div class="projects-grid">
+
+          <article class="card project-card project-featured">
+            <a class="project-shot" href="https://simplestockpos.com.ar/" target="_blank" rel="noopener">
+              <img src="assets/simplestock-caja.webp" width="1600" height="900" loading="lazy"
+                   alt="Pantalla de caja de SimpleStock con una venta de cuatro productos en curso" data-i18n-alt="proj.p0.alt" />
+            </a>
+            <div class="project-body">
+              <div class="project-top">
+                <span class="badge badge-wip" data-i18n="proj.p0.badge">En desarrollo · v0.5</span>
+              </div>
+              <h3 class="project-title">SimpleStock</h3>
+              <p class="project-desc" data-i18n="proj.p0.desc">
+                Sistema de caja y stock para kioscos y almacenes, pensado como producto comercial:
+                se instala en la PC del comercio y se usa desde el navegador, también desde otras cajas
+                de la red local. Lo diseñé y lo dirijo yo, usando IA como herramienta de implementación.
+                Decisiones de diseño: dinero en centavos enteros, importes calculados siempre en el
+                servidor, ventas idempotentes, nada se edita ni se borra y auditoría con hash encadenado.
+                Backend en capas con una prueba que vigila las dependencias, más de 900 pruebas
+                automatizadas y un kiosco piloto real. Código privado, disponible para mostrar en entrevista.
+              </p>
+              <ul class="project-tags" aria-label="Tecnologías">
+                <li class="tag">Java</li>
+                <li class="tag">Spring Boot</li>
+                <li class="tag">SQLite</li>
+                <li class="tag">React</li>
+                <li class="tag">TypeScript</li>
+              </ul>
+              <a class="project-link" href="https://simplestockpos.com.ar/" target="_blank" rel="noopener" data-i18n="proj.p0.link">Ver el sitio del producto ↗</a>
+            </div>
+          </article>
 
           <article class="card project-card">
             <div class="project-top">

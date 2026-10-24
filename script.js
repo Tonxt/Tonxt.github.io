@@ -17,9 +17,9 @@ const t = {
 
     "exp.title":       "Aprender haciendo",
     "exp.item1.date":  "2026 — Actual",
-    "exp.item1.role":  "Proyectos personales de datos",
+    "exp.item1.role":  "Proyectos personales de backend y datos",
     "exp.item1.org":   "Independiente",
-    "exp.item1.desc":  "Diseño y desarrollo de dos proyectos propios de punta a punta — un análisis de datos y un pipeline automatizado que consume una API, persiste en SQLite y se publica en la web — aplicando Python y SQL.",
+    "exp.item1.desc":  "Diseño y dirección de SimpleStock, un sistema de caja y stock para kioscos (Java, Spring Boot, SQLite, React) con un piloto real, y desarrollo de punta a punta de dos proyectos de datos en Python y SQL: un análisis y un pipeline automatizado que consume una API.",
     "exp.item2.role":  "Competencia de programación en Python",
     "exp.item2.desc":  "Desarrollo de proyectos en equipo y contra reloj: resolución de problemas, lógica y colaboración sobre código real.",
 
@@ -32,8 +32,12 @@ const t = {
     "edu.certs.python.serial": "N° de serie: OA-2026-0222002281478",
 
     "proj.title":     "Cosas que construí",
-    "proj.lead":      "Proyectos personales y académicos. El código vive en GitHub.",
+    "proj.lead":      "Proyectos personales y académicos. El código vive en GitHub, salvo SimpleStock, que es privado.",
     "proj.github":    "Ver en GitHub →",
+    "proj.p0.badge":  "En desarrollo · v0.5",
+    "proj.p0.alt":    "Pantalla de caja de SimpleStock con una venta de cuatro productos en curso",
+    "proj.p0.link":   "Ver el sitio del producto ↗",
+    "proj.p0.desc":   "Sistema de caja y stock para kioscos y almacenes, pensado como producto comercial: se instala en la PC del comercio y se usa desde el navegador, también desde otras cajas de la red local. Lo diseñé y lo dirijo yo, usando IA como herramienta de implementación. Decisiones de diseño: dinero en centavos enteros, importes calculados siempre en el servidor, ventas idempotentes, nada se edita ni se borra y auditoría con hash encadenado. Backend en capas con una prueba que vigila las dependencias, más de 900 pruebas automatizadas y un kiosco piloto real. Código privado, disponible para mostrar en entrevista.",
     "proj.p1.badge":  "Terminado",
     "proj.p1.title":  "Análisis de e-commerce · Olist",
     "proj.p1.desc":   "Análisis exploratorio de más de 99.000 órdenes del e-commerce brasileño Olist (2016–2018): evolución de ingresos, categorías más vendidas y distribución regional de las ventas.",
@@ -66,9 +70,9 @@ const t = {
 
     "exp.title":       "Learning by doing",
     "exp.item1.date":  "2026 — Present",
-    "exp.item1.role":  "Personal data projects",
+    "exp.item1.role":  "Personal backend and data projects",
     "exp.item1.org":   "Independent",
-    "exp.item1.desc":  "End-to-end design and development of two personal projects — a data analysis and an automated pipeline that consumes an API, persists data in SQLite, and is published on the web — using Python and SQL.",
+    "exp.item1.desc":  "Design and direction of SimpleStock, a point-of-sale and inventory system for convenience stores (Java, Spring Boot, SQLite, React) with a real pilot, plus end-to-end development of two data projects in Python and SQL: an analysis and an automated pipeline that consumes an API.",
     "exp.item2.role":  "Python Programming Competition",
     "exp.item2.desc":  "Team-based project development under time constraints: problem solving, logic, and real-code collaboration.",
 
@@ -81,8 +85,12 @@ const t = {
     "edu.certs.python.serial": "Serial No.: OA-2026-0222002281478",
 
     "proj.title":     "Things I built",
-    "proj.lead":      "Personal and academic projects. Code lives on GitHub.",
+    "proj.lead":      "Personal and academic projects. Code lives on GitHub, except SimpleStock, which is private.",
     "proj.github":    "View on GitHub →",
+    "proj.p0.badge":  "In development · v0.5",
+    "proj.p0.alt":    "SimpleStock checkout screen with a four-item sale in progress",
+    "proj.p0.link":   "See the product site ↗",
+    "proj.p0.desc":   "Point-of-sale and inventory system for convenience stores, built as a commercial product: it installs on the shop's PC and runs in the browser, including from other registers on the local network. I designed and direct it, using AI as an implementation tool. Design decisions: money as integer cents, amounts always computed on the server, idempotent sales, nothing is edited or deleted, and a hash-chained audit log. Layered backend with a test that enforces dependencies, 900+ automated tests and a real pilot shop. Private code, available to show in an interview.",
     "proj.p1.badge":  "Done",
     "proj.p1.title":  "E-Commerce Analysis · Olist",
     "proj.p1.desc":   "Exploratory analysis of 99,000+ orders from Brazilian e-commerce platform Olist (2016–2018): revenue trends, top-selling categories, and regional sales distribution.",
@@ -106,6 +114,11 @@ function applyLang(lang) {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.dataset.i18n;
     if (t[lang][key] !== undefined) el.textContent = t[lang][key];
+  });
+
+  document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+    const key = el.dataset.i18nAlt;
+    if (t[lang][key] !== undefined) el.alt = t[lang][key];
   });
 
   document.documentElement.lang = lang;

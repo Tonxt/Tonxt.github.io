@@ -389,6 +389,41 @@ body { min-height: 100vh; }
   color: var(--success);
   border: 1px solid rgba(111, 160, 106, 0.35);
 }
+.badge-wip {
+  color: var(--warning);
+  border: 1px solid rgba(204, 154, 74, 0.35);
+}
+
+.project-featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+.project-shot {
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.project-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.project-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.project-featured .project-top { justify-content: flex-start; }
+@media (min-width: 900px) {
+  .project-featured {
+    grid-template-columns: 1.15fr 1fr;
+    align-items: center;
+  }
+}
+
 .project-title {
   font-size: var(--text-lg);
   margin: 0;
