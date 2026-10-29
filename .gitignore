@@ -10,3 +10,7 @@ marca/
 # Sistema
 Thumbs.db
 desktop.ini
+
+# Impeccable: capturas de revisión y caché local
+.impeccable/review/
+.impeccable/hook.cache.json

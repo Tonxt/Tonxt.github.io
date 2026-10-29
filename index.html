@@ -6,7 +6,7 @@
   <title>Lisandro Acuña — Backend Developer Trainee</title>
   <meta name="description" content="Portfolio de Lisandro Acuña. Estudiante de Ingeniería Informática aprendiendo desarrollo backend con Java, Python y SQL." />
   <meta name="author" content="Lisandro Acuña" />
-  <meta name="theme-color" content="#141519" />
+  <meta name="theme-color" content="#221a26" />
   <link rel="canonical" href="https://tonxt.github.io/" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 
@@ -21,14 +21,15 @@
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Fuentes (preconnect + carga directa) -->
+  <!-- Fuente pixel -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" />
 
-  <link rel="stylesheet" href="identidad/tokens.css?v=13" />
-  <link rel="stylesheet" href="styles.css?v=13" />
-  <script src="script.js?v=13" defer></script>
+  <link rel="stylesheet" href="identidad/tokens.css?v=14" />
+  <link rel="stylesheet" href="styles.css?v=14" />
+  <script src="script.js?v=14" defer></script>
+  <script src="scene.js?v=14" defer></script>
 
   <!-- Datos estructurados (SEO) -->
   <script type="application/ld+json">
@@ -53,6 +54,19 @@
 
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
+  <!-- Íconos pixel (se reutilizan con <use>) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-cur" viewBox="0 0 2 3"><path d="M0 0h1v1h1v1h-1v1h-1z"/></symbol>
+      <symbol id="i-down" viewBox="0 0 7 8"><path d="M2 0h3v4h2v1h-1v1h-1v1h-1v1h-1v-1h-1v-1h-1v-1h-1v-1h2z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 10 8"><path d="M0 0h10v8h-10zM1 1v1h1v1h1v1h1v1h2v-1h1v-1h1v-1h1v-1zM1 3v4h8v-4h-1v1h-1v1h-1v1h-2v-1h-1v-1h-1v-1z" fill-rule="evenodd"/></symbol>
+      <symbol id="i-gh" viewBox="0 0 10 10"><path d="M3 0h4v1h1v1h1v1h1v4h-1v1h-1v1h-1v1h-1v-3h1v-1h1v-3h-1v-1h-1v1h-2v-1h-1v1h-1v3h1v1h1v1h-1v-1h-1v1h1v1h1v1h-1v-1h-1v-1h-1v-1h-1v-4h1v-1h1v-1h1z"/></symbol>
+      <symbol id="i-in" viewBox="0 0 10 10"><path d="M0 0h10v10h-10zM2 2v2h2v-2zM2 5v3h2v-3zM5 4v4h2v-3h1v3h1v-3h-1v-1h-1v1h-1v-1z" fill-rule="evenodd"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 9 9"><path d="M0 0h6v2h-1v-1h-4v5h1v1h-2zM3 2h6v7h-6zM4 3v5h4v-5z" fill-rule="evenodd"/></symbol>
+      <symbol id="i-up" viewBox="0 0 7 8"><path d="M3 0h1v1h1v1h1v1h1v1h-2v4h-3v-4h-2v-1h1v-1h1v-1h1z"/></symbol>
+    </defs>
+  </svg>
+
   <!-- ============ Navbar ============ -->
   <header class="navbar">
     <div class="nav-inner">
@@ -64,174 +78,183 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="nav-links" id="primary-nav" aria-label="Navegación principal">
-        <a href="#sobre-mi"    data-i18n="nav.about">Sobre mí</a>
-        <a href="#experiencia" data-i18n="nav.exp">Experiencia</a>
-        <a href="#estudios"    data-i18n="nav.edu">Estudios</a>
-        <a href="#proyectos"   data-i18n="nav.projects">Proyectos</a>
+        <a href="#sobre-mi"><svg class="cur" aria-hidden="true"><use href="#i-cur"/></svg><span data-i18n="nav.about">Sobre mí</span></a>
+        <a href="#experiencia"><svg class="cur" aria-hidden="true"><use href="#i-cur"/></svg><span data-i18n="nav.exp">Experiencia</span></a>
+        <a href="#estudios"><svg class="cur" aria-hidden="true"><use href="#i-cur"/></svg><span data-i18n="nav.edu">Estudios</span></a>
+        <a href="#proyectos"><svg class="cur" aria-hidden="true"><use href="#i-cur"/></svg><span data-i18n="nav.projects">Proyectos</span></a>
         <a href="#contacto" class="nav-cta" data-i18n="nav.contact">Contacto</a>
         <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">EN</button>
       </nav>
     </div>
   </header>
 
-  <!-- ============ Hero ============ -->
   <main id="contenido">
+    <!-- ============ Hero: el cuarto y el sótano ============ -->
     <section id="inicio" class="hero">
-      <div class="hero-inner">
-        <h1 class="hero-name">Lisandro Acuña</h1>
+      <div class="scene-wrap" id="scene-wrap">
+        <canvas id="scene" role="img" aria-label="Lisandro en pixel art, trabajando en su escritorio con un café y un gato durmiendo al lado; debajo del piso, el sótano con los servidores" data-i18n-aria="hero.scene"></canvas>
+        <span class="scene-note" id="scene-note" data-i18n="hero.basement">SÓTANO · lo que no se ve</span>
+      </div>
 
-        <p class="hero-role">Backend Developer · Trainee</p>
-
-        <p class="hero-desc" data-i18n="hero.desc">
-          Estudiante de Ingeniería Informática aprendiendo desarrollo backend.
-          Programo en Java y Python, trabajo con bases de datos SQL y armo proyectos
-          propios para entender cómo funcionan los sistemas por detrás. Me interesan
-          la inteligencia artificial y el machine learning, y busco mi primera
-          oportunidad para crecer como desarrollador.
-        </p>
-
-        <div class="hero-cta">
-          <a href="#proyectos" class="btn" data-i18n="hero.cta.projects">Ver proyectos</a>
-          <a href="assets/cv-lisandro-acuna-es.pdf" id="cv-link" class="btn btn-ghost" target="_blank" rel="noopener" data-i18n="hero.cta.cv">Descargar CV</a>
+      <div class="hero-copy">
+        <div>
+          <h1 class="hero-name">Lisandro Acuña<span class="hero-role">Backend Developer · Trainee</span></h1>
+          <p class="hero-status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-i18n="hero.status">Abierto a oportunidades trainee · junior</span>
+          </p>
         </div>
 
-        <ul class="hero-tags" aria-label="Herramientas">
-          <li class="tag">Java</li>
-          <li class="tag">Python</li>
-          <li class="tag">SQL</li>
-          <li class="tag">Git</li>
-        </ul>
-
-        <p class="hero-status">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span data-i18n="hero.status">Abierto a oportunidades trainee · junior</span>
-        </p>
+        <div class="dialog">
+          <span class="speaker" aria-hidden="true">LISANDRO</span>
+          <p data-i18n="hero.desc">¡Hola! Estudio Ingeniería Informática en UADE y aprendo backend con Java, Python y SQL.</p>
+          <p class="dialog-more"><span data-i18n="hero.desc2">Me atrapa lo que no se ve: cómo un sistema recibe un pedido, lo procesa y guarda la información.</span><svg class="caret" viewBox="0 0 3 2" aria-hidden="true"><path d="M0 0h3v1h-1v1h-1v-1h-1z"/></svg></p>
+          <div class="hero-cta">
+            <a href="#proyectos" class="btn" data-i18n="hero.cta.projects">Ver proyectos</a>
+            <a href="assets/cv-lisandro-acuna-es.pdf" id="cv-link" class="btn btn-ghost" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="hero.cta.cv">Descargar CV</span></a>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ============ Sobre mí ============ -->
     <section id="sobre-mi" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="section-title" data-i18n="about.title">Curiosidad con método</h2>
+      <div class="container about">
+        <h2 class="section-title" data-i18n="about.title">Curiosidad con método</h2>
+        <div class="about-grid">
+          <p class="about-text" data-i18n="about.body">
+            Soy Lisandro, estudiante de primer año de Ingeniería Informática en la
+            UADE. Lo que más me atrapa es lo que no se ve: cómo un sistema recibe
+            un pedido, lo procesa y guarda la información. Hoy estoy aprendiendo
+            backend con Java y Python sobre bases de datos SQL, y en el horizonte
+            tengo la inteligencia artificial y el machine learning. Cada proyecto
+            que encaro es una excusa para aprender algo nuevo.
+          </p>
+          <div class="sheet px-box">
+            <p class="sheet-head" data-i18n="sheet.title">Ficha del personaje</p>
+            <dl>
+              <div><dt data-i18n="sheet.class">Clase</dt><dd>Backend Developer Trainee</dd></div>
+              <div><dt data-i18n="sheet.base">Base</dt><dd>Buenos Aires, AR</dd></div>
+              <div><dt data-i18n="sheet.study">Estudios</dt><dd data-i18n="sheet.study.v">Ing. Informática · UADE</dd></div>
+              <div><dt data-i18n="sheet.gear">Equipo</dt><dd>Java · Python · SQL · Git</dd></div>
+              <div><dt data-i18n="sheet.quest">Busca</dt><dd data-i18n="sheet.quest.v">Primer puesto trainee o junior</dd></div>
+            </dl>
+          </div>
         </div>
-        <p class="about-text" data-i18n="about.body">
-          Soy Lisandro, estudiante de primer año de Ingeniería Informática en la
-          UADE. Lo que más me atrapa es lo que no se ve: cómo un sistema recibe
-          un pedido, lo procesa y guarda la información. Hoy estoy aprendiendo
-          backend con Java y Python sobre bases de datos SQL, y en el horizonte
-          tengo la inteligencia artificial y el machine learning. Cada proyecto
-          que encaro es una excusa para aprender algo nuevo.
-        </p>
       </div>
     </section>
 
     <!-- ============ Experiencia ============ -->
-    <section id="experiencia" class="section">
+    <section id="experiencia" class="section section-alt">
       <div class="container">
-        <div class="section-head">
-          <h2 class="section-title" data-i18n="exp.title">Aprender haciendo</h2>
-        </div>
-        <ul class="timeline">
-          <li class="timeline-item">
-            <span class="timeline-date" data-i18n="exp.item1.date">2026 — Actual</span>
+        <h2 class="section-title" data-i18n="exp.title">Aprender haciendo</h2>
+        <ol class="log">
+          <li class="log-item">
+            <span class="log-date" data-i18n="exp.item1.date">2026 — Actual</span>
             <div>
-              <h3 class="timeline-role" data-i18n="exp.item1.role">Proyectos personales de backend y datos</h3>
-              <p class="timeline-org" data-i18n="exp.item1.org">Independiente</p>
-              <p class="timeline-desc" data-i18n="exp.item1.desc">
+              <h3 class="log-role" data-i18n="exp.item1.role">Proyectos personales de backend y datos</h3>
+              <p class="log-org" data-i18n="exp.item1.org">Independiente</p>
+              <p class="log-desc" data-i18n="exp.item1.desc">
                 Diseño y dirección de SimpleStock, un sistema de caja y stock para kioscos
                 (Java, Spring Boot, SQLite, React) con un piloto real, y desarrollo de punta a punta de dos
                 proyectos de datos en Python y SQL: un análisis y un pipeline automatizado que consume una API.
               </p>
             </div>
           </li>
-          <li class="timeline-item">
-            <span class="timeline-date">2026</span>
+          <li class="log-item">
+            <span class="log-date">2026</span>
             <div>
-              <h3 class="timeline-role" data-i18n="exp.item2.role">Competencia de programación en Python</h3>
-              <p class="timeline-org">UADE</p>
-              <p class="timeline-desc" data-i18n="exp.item2.desc">
+              <h3 class="log-role" data-i18n="exp.item2.role">Competencia de programación en Python</h3>
+              <p class="log-org">UADE</p>
+              <p class="log-desc" data-i18n="exp.item2.desc">
                 Desarrollo de proyectos en equipo y contra reloj: resolución de
                 problemas, lógica y colaboración sobre código real.
               </p>
             </div>
           </li>
-        </ul>
+        </ol>
       </div>
     </section>
 
     <!-- ============ Estudios ============ -->
     <section id="estudios" class="section">
       <div class="container">
-        <div class="section-head">
-          <h2 class="section-title" data-i18n="edu.title">Formación</h2>
-        </div>
-        <ul class="timeline">
-          <li class="timeline-item">
-            <span class="timeline-date" data-i18n="edu.item1.date">2026 — En curso</span>
+        <h2 class="section-title" data-i18n="edu.title">Formación</h2>
+        <ol class="log">
+          <li class="log-item">
+            <span class="log-date" data-i18n="edu.item1.date">2026 — En curso</span>
             <div>
-              <h3 class="timeline-role" data-i18n="edu.item1.role">Ingeniería Informática</h3>
-              <p class="timeline-org">UADE — Universidad Argentina de la Empresa</p>
-              <p class="timeline-desc" data-i18n="edu.item1.desc">
+              <h3 class="log-role" data-i18n="edu.item1.role">Ingeniería Informática</h3>
+              <p class="log-org">UADE — Universidad Argentina de la Empresa</p>
+              <p class="log-desc" data-i18n="edu.item1.desc">
                 Primer año. Foco personal en backend, bases de datos y programación.
               </p>
             </div>
           </li>
+        </ol>
+        <h3 class="certs-title" data-i18n="edu.certs.title">Certificaciones</h3>
+        <ul class="certs-list">
+          <li class="cert-item px-box">
+            <svg class="medal" viewBox="0 0 8 10" aria-hidden="true"><path class="m-rib" d="M1 0h2v3h-1v1h-1zM5 0h2v4h-1v-1h-1z"/><path class="m-coin" d="M2 3h4v1h1v4h-1v1h-4v-1h-1v-4h1z"/><path class="m-hi" d="M3 5h1v2h-1z"/></svg>
+            <div>
+              <p class="cert-name"><a class="ext" href="https://www.credly.com/badges/9691ea7a-b1af-4a07-8f65-4fef71dd2e0e" target="_blank" rel="noopener">Networking Basics</a></p>
+              <p class="cert-issuer">Cisco · <span data-i18n="edu.certs.d1">Mar. 2026</span></p>
+            </div>
+          </li>
+          <li class="cert-item px-box">
+            <svg class="medal" viewBox="0 0 8 10" aria-hidden="true"><path class="m-rib" d="M1 0h2v3h-1v1h-1zM5 0h2v4h-1v-1h-1z"/><path class="m-coin" d="M2 3h4v1h1v4h-1v1h-4v-1h-1v-4h1z"/><path class="m-hi" d="M3 5h1v2h-1z"/></svg>
+            <div>
+              <p class="cert-name" data-i18n="edu.certs.python.name">Introducción a la programación con Python</p>
+              <p class="cert-issuer">Santander Open Academy · <span data-i18n="edu.certs.d2">Feb. 2026</span></p>
+              <p class="cert-serial" data-i18n="edu.certs.python.serial">N° de serie: OA-2026-0222002281478</p>
+            </div>
+          </li>
+          <li class="cert-item px-box">
+            <svg class="medal" viewBox="0 0 8 10" aria-hidden="true"><path class="m-rib" d="M1 0h2v3h-1v1h-1zM5 0h2v4h-1v-1h-1z"/><path class="m-coin" d="M2 3h4v1h1v4h-1v1h-4v-1h-1v-4h1z"/><path class="m-hi" d="M3 5h1v2h-1z"/></svg>
+            <div>
+              <p class="cert-name"><a class="ext" href="https://www.credly.com/badges/1287659c-d565-41d3-bc9e-bd64a0c68e0d" target="_blank" rel="noopener">Introduction to Cybersecurity</a></p>
+              <p class="cert-issuer">Cisco · <span data-i18n="edu.certs.d2">Feb. 2026</span></p>
+            </div>
+          </li>
         </ul>
-        <div class="certs">
-          <h3 class="certs-title" data-i18n="edu.certs.title">Certificaciones</h3>
-          <ul class="certs-list">
-            <li class="cert-item">
-              <div>
-                <p class="cert-name">
-                  <a href="https://www.credly.com/badges/9691ea7a-b1af-4a07-8f65-4fef71dd2e0e" target="_blank" rel="noopener">Networking Basics ↗</a>
-                </p>
-                <p class="cert-issuer">Cisco</p>
-              </div>
-              <span class="cert-date">Mar. 2026</span>
-            </li>
-            <li class="cert-item">
-              <div>
-                <p class="cert-name" data-i18n="edu.certs.python.name">Introducción a la programación con Python</p>
-                <p class="cert-issuer">Santander Open Academy</p>
-                <p class="cert-serial" data-i18n="edu.certs.python.serial">N° de serie: OA-2026-0222002281478</p>
-              </div>
-              <span class="cert-date">Feb. 2026</span>
-            </li>
-            <li class="cert-item">
-              <div>
-                <p class="cert-name">
-                  <a href="https://www.credly.com/badges/1287659c-d565-41d3-bc9e-bd64a0c68e0d" target="_blank" rel="noopener">Introduction to Cybersecurity ↗</a>
-                </p>
-                <p class="cert-issuer">Cisco</p>
-              </div>
-              <span class="cert-date">Feb. 2026</span>
-            </li>
-          </ul>
-        </div>
       </div>
     </section>
 
-    <!-- ============ Proyectos ============ -->
-    <section id="proyectos" class="section">
+    <!-- ============ Proyectos: inventario ============ -->
+    <section id="proyectos" class="section section-alt">
       <div class="container">
-        <div class="section-head">
-          <h2 class="section-title" data-i18n="proj.title">Cosas que construí</h2>
-          <p class="section-lead" data-i18n="proj.lead">
-            Proyectos personales y académicos. El código vive en GitHub, salvo SimpleStock, que es privado.
-          </p>
-        </div>
-        <div class="projects-grid">
+        <h2 class="section-title" data-i18n="proj.title">Cosas que construí</h2>
+        <p class="section-lead" data-i18n="proj.lead">
+          Proyectos personales y académicos. El código vive en GitHub, salvo SimpleStock, que es privado.
+        </p>
 
-          <article class="card project-card project-featured">
-            <a class="project-shot" href="https://simplestockpos.com.ar/" target="_blank" rel="noopener">
+        <div class="inv" id="inv">
+          <div class="slots" role="tablist" aria-label="Proyectos" data-i18n-aria="nav.projects">
+            <button class="slot" role="tab" id="tab-p0" aria-controls="panel-p0" aria-selected="true">
+              <canvas class="ico" width="8" height="8" data-ico="box" aria-hidden="true"></canvas>
+              <span>SimpleStock<small>Java · Spring Boot</small></span>
+            </button>
+            <button class="slot" role="tab" id="tab-p2" aria-controls="panel-p2" aria-selected="false" tabindex="-1">
+              <canvas class="ico" width="8" height="8" data-ico="coin" aria-hidden="true"></canvas>
+              <span>Dólar Tracker<small>Python · SQLite</small></span>
+            </button>
+            <button class="slot" role="tab" id="tab-p1" aria-controls="panel-p1" aria-selected="false" tabindex="-1">
+              <canvas class="ico" width="8" height="8" data-ico="chart" aria-hidden="true"></canvas>
+              <span>Olist<small>Python · Pandas</small></span>
+            </button>
+            <button class="slot" role="tab" id="tab-p3" aria-controls="panel-p3" aria-selected="false" tabindex="-1">
+              <canvas class="ico" width="8" height="8" data-ico="flag" aria-hidden="true"></canvas>
+              <span data-i18n="proj.p3.short">Competencia UADE</span>
+            </button>
+          </div>
+
+          <article class="detail" role="tabpanel" id="panel-p0" aria-labelledby="tab-p0">
+            <a class="detail-art detail-shot" href="https://simplestockpos.com.ar/" target="_blank" rel="noopener">
               <img src="assets/simplestock-caja.webp" width="1600" height="900" loading="lazy"
                    alt="Pantalla de caja de SimpleStock con una venta de cuatro productos en curso" data-i18n-alt="proj.p0.alt" />
             </a>
-            <div class="project-body">
-              <div class="project-top">
-                <span class="badge badge-wip" data-i18n="proj.p0.badge">En desarrollo · v0.5</span>
-              </div>
+            <div class="detail-body">
+              <span class="badge badge-wip" data-i18n="proj.p0.badge">En desarrollo · v0.5</span>
               <h3 class="project-title">SimpleStock</h3>
               <p class="project-desc" data-i18n="proj.p0.desc">
                 Sistema de caja y stock para kioscos y almacenes, pensado como producto comercial:
@@ -242,104 +265,103 @@
                 Backend en capas con una prueba que vigila las dependencias, más de 900 pruebas
                 automatizadas y un kiosco piloto real. Código privado, disponible para mostrar en entrevista.
               </p>
-              <ul class="project-tags" aria-label="Tecnologías">
-                <li class="tag">Java</li>
-                <li class="tag">Spring Boot</li>
-                <li class="tag">SQLite</li>
-                <li class="tag">React</li>
-                <li class="tag">TypeScript</li>
+              <ul class="chips" aria-label="Tecnologías">
+                <li>Java</li><li>Spring Boot</li><li>SQLite</li><li>React</li><li>TypeScript</li>
               </ul>
-              <a class="project-link" href="https://simplestockpos.com.ar/" target="_blank" rel="noopener" data-i18n="proj.p0.link">Ver el sitio del producto ↗</a>
+              <div class="project-links">
+                <a class="project-link ext" href="https://simplestockpos.com.ar/" target="_blank" rel="noopener" data-i18n="proj.p0.link">Ver el sitio del producto</a>
+              </div>
             </div>
           </article>
 
-          <article class="card project-card">
-            <div class="project-top">
-              <span class="badge badge-done" data-i18n="proj.p1.badge">Terminado</span>
-            </div>
-            <h3 class="project-title" data-i18n="proj.p1.title">Análisis de e-commerce · Olist</h3>
-            <p class="project-desc" data-i18n="proj.p1.desc">
-              Análisis exploratorio de más de 99.000 órdenes del e-commerce
-              brasileño Olist (2016–2018): evolución de ingresos, categorías
-              más vendidas y distribución regional de las ventas.
-            </p>
-            <ul class="project-tags" aria-label="Tecnologías">
-              <li class="tag">Python</li>
-              <li class="tag">Pandas</li>
-              <li class="tag">Matplotlib</li>
-              <li class="tag">Jupyter</li>
-            </ul>
-            <a class="project-link" href="https://github.com/Tonxt/olist-ecommerce-analysis" target="_blank" rel="noopener" data-i18n="proj.github">Ver en GitHub →</a>
-          </article>
-
-          <article class="card project-card">
-            <div class="project-top">
-              <span class="badge badge-done" data-i18n="proj.p2.badge">Terminado</span>
-            </div>
-            <h3 class="project-title">Argentina Dólar Tracker</h3>
-            <p class="project-desc" data-i18n="proj.p2.desc">
-              Pipeline automatizado que consume una API REST pública, guarda en
-              SQLite el histórico de 7 cotizaciones del dólar en Argentina (oficial,
-              blue, MEP, CCL, cripto, mayorista y tarjeta) y lo sirve en un dashboard
-              interactivo desplegado en la nube.
-            </p>
-            <ul class="project-tags" aria-label="Tecnologías">
-              <li class="tag">Python</li>
-              <li class="tag">Pandas</li>
-              <li class="tag">SQLite</li>
-              <li class="tag">Streamlit</li>
-              <li class="tag">Matplotlib</li>
-            </ul>
-            <div class="project-links">
-              <a class="project-link" href="https://tonxt.github.io/argentina-dolar-tracker/" target="_blank" rel="noopener" data-i18n="proj.p2.demo">Ver dashboard ↗</a>
-              <a class="project-link" href="https://github.com/Tonxt/argentina-dolar-tracker" target="_blank" rel="noopener" data-i18n="proj.github">Ver en GitHub →</a>
+          <article class="detail" role="tabpanel" id="panel-p2" aria-labelledby="tab-p2">
+            <a class="detail-art detail-shot" href="https://tonxt.github.io/argentina-dolar-tracker/" target="_blank" rel="noopener">
+              <img src="assets/dolar-tracker.jpg" width="800" height="505" loading="lazy"
+                   alt="Dashboard del Dólar Tracker con las siete cotizaciones del día y el gráfico de evolución" data-i18n-alt="proj.p2.alt" />
+            </a>
+            <div class="detail-body">
+              <span class="badge" data-i18n="proj.p2.badge">Terminado</span>
+              <h3 class="project-title">Argentina Dólar Tracker</h3>
+              <p class="project-desc" data-i18n="proj.p2.desc">
+                Pipeline automatizado que consume una API REST pública, guarda en
+                SQLite el histórico de 7 cotizaciones del dólar en Argentina (oficial,
+                blue, MEP, CCL, cripto, mayorista y tarjeta) y lo sirve en un dashboard
+                interactivo desplegado en la nube.
+              </p>
+              <ul class="chips" aria-label="Tecnologías">
+                <li>Python</li><li>Pandas</li><li>SQLite</li><li>Streamlit</li><li>Matplotlib</li>
+              </ul>
+              <div class="project-links">
+                <a class="project-link ext" href="https://tonxt.github.io/argentina-dolar-tracker/" target="_blank" rel="noopener" data-i18n="proj.p2.demo">Ver dashboard</a>
+                <a class="project-link ext" href="https://github.com/Tonxt/argentina-dolar-tracker" target="_blank" rel="noopener" data-i18n="proj.github">Ver en GitHub</a>
+              </div>
             </div>
           </article>
 
-          <article class="card project-card">
-            <div class="project-top">
-              <span class="badge badge-done" data-i18n="proj.p3.badge">Académico</span>
+          <article class="detail" role="tabpanel" id="panel-p1" aria-labelledby="tab-p1">
+            <div class="detail-art" aria-hidden="true"><canvas class="art" width="48" height="32" data-art="olist"></canvas></div>
+            <div class="detail-body">
+              <span class="badge" data-i18n="proj.p1.badge">Terminado</span>
+              <h3 class="project-title" data-i18n="proj.p1.title">Análisis de e-commerce · Olist</h3>
+              <p class="project-desc" data-i18n="proj.p1.desc">
+                Análisis exploratorio de más de 99.000 órdenes del e-commerce
+                brasileño Olist (2016–2018): evolución de ingresos, categorías
+                más vendidas y distribución regional de las ventas.
+              </p>
+              <ul class="chips" aria-label="Tecnologías">
+                <li>Python</li><li>Pandas</li><li>Matplotlib</li><li>Jupyter</li>
+              </ul>
+              <div class="project-links">
+                <a class="project-link ext" href="https://github.com/Tonxt/olist-ecommerce-analysis" target="_blank" rel="noopener" data-i18n="proj.github">Ver en GitHub</a>
+              </div>
             </div>
-            <h3 class="project-title" data-i18n="proj.p3.title">Competencia Python · UADE</h3>
-            <p class="project-desc" data-i18n="proj.p3.desc">
-              Proyecto desarrollado en equipo durante la competencia de
-              programación de la universidad.
-            </p>
-            <ul class="project-tags" aria-label="Tecnologías">
-              <li class="tag">Python</li>
-            </ul>
           </article>
 
+          <article class="detail" role="tabpanel" id="panel-p3" aria-labelledby="tab-p3">
+            <div class="detail-art" aria-hidden="true"><canvas class="art" width="48" height="32" data-art="uade"></canvas></div>
+            <div class="detail-body">
+              <span class="badge" data-i18n="proj.p3.badge">Académico</span>
+              <h3 class="project-title" data-i18n="proj.p3.title">Competencia Python · UADE</h3>
+              <p class="project-desc" data-i18n="proj.p3.desc">
+                Proyecto desarrollado en equipo durante la competencia de
+                programación de la universidad.
+              </p>
+              <ul class="chips" aria-label="Tecnologías">
+                <li>Python</li>
+              </ul>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- ============ Contacto ============ -->
-    <section id="contacto" class="section">
+    <section id="contacto" class="section section-dark">
       <div class="container contact-inner">
+        <canvas class="cat-sit" id="cat-sit" width="20" height="16" aria-hidden="true"></canvas>
         <h2 class="section-title" data-i18n="contact.title">Hablemos</h2>
         <p class="section-lead" data-i18n="contact.lead">
           ¿Tenés una oportunidad trainee o junior en desarrollo backend?
           Me encantaría escucharla.
         </p>
         <div class="contact-cta">
-          <a class="btn btn-ghost" href="mailto:lisandrow29@gmail.com">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+          <a class="btn" href="mailto:lisandrow29@gmail.com">
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
             <span data-i18n="contact.btn.email">Escribime</span>
           </a>
           <a class="btn btn-ghost" href="https://github.com/Tonxt" target="_blank" rel="noopener">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <svg class="icon" aria-hidden="true"><use href="#i-gh"/></svg>
             <span>GitHub</span>
           </a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/lisandro-acu%C3%B1a-3947b129b/" target="_blank" rel="noopener">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <svg class="icon" aria-hidden="true"><use href="#i-in"/></svg>
             <span>LinkedIn</span>
           </a>
         </div>
         <p class="contact-email">
           <a href="mailto:lisandrow29@gmail.com">lisandrow29@gmail.com</a>
           <button class="copy-btn" id="copy-email" type="button" aria-label="Copiar email">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>
           </button>
           <span class="copy-feedback" id="copy-feedback" aria-live="polite"></span>
         </p>
@@ -356,7 +378,7 @@
   </footer>
 
   <button class="to-top" id="to-top" type="button" aria-label="Volver arriba">
-    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+    <svg class="icon" aria-hidden="true"><use href="#i-up"/></svg>
   </button>
 
 </body>

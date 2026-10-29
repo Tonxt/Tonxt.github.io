@@ -1,0 +1,581 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-28T00:00:00Z",
+  "title": "Design System: Lisandro Acuña · Página personal",
+  "extensions": {
+    "colorMeta": {
+      "orange": {
+        "role": "primary",
+        "displayName": "Naranja Lámpara",
+        "canonical": "#f08a4b",
+        "cssVar": "--orange",
+        "tonalRamp": [
+          "#170600",
+          "#3c1a04",
+          "#692f04",
+          "#954914",
+          "#c5631e",
+          "#ec8748",
+          "#fdb790",
+          "#feeadf"
+        ]
+      },
+      "sun": {
+        "role": "secondary",
+        "displayName": "Ámbar de Luz",
+        "canonical": "#ffc477",
+        "cssVar": "--sun",
+        "tonalRamp": [
+          "#130900",
+          "#352001",
+          "#5a3a07",
+          "#855602",
+          "#ac7623",
+          "#d1994b",
+          "#f8bd70",
+          "#feebd4"
+        ]
+      },
+      "glow": {
+        "role": "secondary",
+        "displayName": "Resplandor",
+        "canonical": "#ffe2a8",
+        "cssVar": "--glow",
+        "tonalRamp": [
+          "#110a00",
+          "#312201",
+          "#543e09",
+          "#775d25",
+          "#997e47",
+          "#bda169",
+          "#e2c58c",
+          "#feedcb"
+        ]
+      },
+      "lime": {
+        "role": "tertiary",
+        "displayName": "Lima LED",
+        "canonical": "#b9d97a",
+        "cssVar": "--lime",
+        "tonalRamp": [
+          "#080d00",
+          "#1f2a04",
+          "#384a03",
+          "#536b13",
+          "#728f2f",
+          "#94b254",
+          "#b7d778",
+          "#dcfd9d"
+        ]
+      },
+      "red": {
+        "role": "neutral",
+        "displayName": "Rojo Ladrillo",
+        "canonical": "#b8574a",
+        "cssVar": "--red",
+        "tonalRamp": [
+          "#1f0000",
+          "#4c0301",
+          "#781b13",
+          "#9d3f33",
+          "#c36153",
+          "#ea8475",
+          "#fbb5a9",
+          "#fee9e5"
+        ]
+      },
+      "red-text": {
+        "role": "neutral",
+        "displayName": "Rojo para Texto",
+        "canonical": "#8f3d2c",
+        "cssVar": "--red-text",
+        "tonalRamp": [
+          "#1d0200",
+          "#480b01",
+          "#732313",
+          "#974533",
+          "#bd6654",
+          "#e48975",
+          "#fbb6a6",
+          "#fee9e4"
+        ]
+      },
+      "teal": {
+        "role": "tertiary",
+        "displayName": "Teal",
+        "canonical": "#4f7f7a",
+        "cssVar": "--teal",
+        "tonalRamp": [
+          "#000e0d",
+          "#042c29",
+          "#1a4b47",
+          "#3b6b66",
+          "#5d8d88",
+          "#7fb0ab",
+          "#a2d5cf",
+          "#c7fbf5"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "#221a26",
+        "cssVar": "--ink",
+        "tonalRamp": [
+          "#0f0813",
+          "#2a212e",
+          "#473e4c",
+          "#675d6c",
+          "#887e8d",
+          "#aba1b0",
+          "#cfc5d5",
+          "#f5eafb"
+        ]
+      },
+      "wall": {
+        "role": "neutral",
+        "displayName": "Pared Ciruela",
+        "canonical": "#4b2e48",
+        "cssVar": "--wall",
+        "tonalRamp": [
+          "#180216",
+          "#351932",
+          "#543651",
+          "#755571",
+          "#977693",
+          "#bb98b7",
+          "#e0bcdb",
+          "#fee6fb"
+        ]
+      },
+      "steel": {
+        "role": "neutral",
+        "displayName": "Acero",
+        "canonical": "#3e2b3d",
+        "cssVar": "--steel",
+        "tonalRamp": [
+          "#140514",
+          "#301e2f",
+          "#4e3a4d",
+          "#6e596d",
+          "#907a8f",
+          "#b49cb2",
+          "#d9c0d7",
+          "#fee5fd"
+        ]
+      },
+      "wood": {
+        "role": "neutral",
+        "displayName": "Madera",
+        "canonical": "#8b5a3c",
+        "cssVar": "--wood",
+        "tonalRamp": [
+          "#170600",
+          "#3c1a03",
+          "#623416",
+          "#845436",
+          "#a87556",
+          "#cd9778",
+          "#f3bb9b",
+          "#feeade"
+        ]
+      },
+      "wood-dk": {
+        "role": "neutral",
+        "displayName": "Madera Oscura",
+        "canonical": "#5e3a2e",
+        "cssVar": "--wood-dk",
+        "tonalRamp": [
+          "#1b0300",
+          "#3b1a0f",
+          "#5b372c",
+          "#7d574a",
+          "#a0776a",
+          "#c49a8c",
+          "#eabeaf",
+          "#feeae3"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel",
+        "canonical": "#f5e6cc",
+        "cssVar": "--paper",
+        "tonalRamp": [
+          "#120a00",
+          "#2e230e",
+          "#4c402a",
+          "#6c5f49",
+          "#8e8069",
+          "#b1a38b",
+          "#d6c7ae",
+          "#fcedd2"
+        ]
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Papel Tostado",
+        "canonical": "#eed8b6",
+        "cssVar": "--paper-2",
+        "tonalRamp": [
+          "#120900",
+          "#322203",
+          "#513f21",
+          "#715e40",
+          "#937f60",
+          "#b7a281",
+          "#dcc6a4",
+          "#feecd0"
+        ]
+      },
+      "fog": {
+        "role": "neutral",
+        "displayName": "Niebla",
+        "canonical": "#c7a99b",
+        "cssVar": "--fog",
+        "tonalRamp": [
+          "#180500",
+          "#351f14",
+          "#543b30",
+          "#755a4e",
+          "#987b6e",
+          "#bb9e90",
+          "#e1c2b3",
+          "#ffeae0"
+        ]
+      },
+      "slate": {
+        "role": "neutral",
+        "displayName": "Pizarra",
+        "canonical": "#8a6b7a",
+        "cssVar": "--slate",
+        "tonalRamp": [
+          "#18030e",
+          "#351c29",
+          "#543846",
+          "#755766",
+          "#977887",
+          "#bb9aaa",
+          "#e0bece",
+          "#ffe7f2"
+        ]
+      },
+      "text-2": {
+        "role": "neutral",
+        "displayName": "Texto 2",
+        "canonical": "#5e4450",
+        "cssVar": "--text-2",
+        "tonalRamp": [
+          "#17040e",
+          "#341d28",
+          "#533945",
+          "#735865",
+          "#967986",
+          "#b99ba9",
+          "#debfcd",
+          "#ffe7f1"
+        ]
+      },
+      "text-3": {
+        "role": "neutral",
+        "displayName": "Texto 3",
+        "canonical": "#6e5260",
+        "cssVar": "--text-3",
+        "tonalRamp": [
+          "#17040e",
+          "#341c29",
+          "#533946",
+          "#745866",
+          "#967887",
+          "#ba9baa",
+          "#dfbece",
+          "#fee7f2"
+        ]
+      },
+      "text-inv-2": {
+        "role": "neutral",
+        "displayName": "Texto Inverso 2",
+        "canonical": "#d9c3b4",
+        "cssVar": "--text-inv-2",
+        "tonalRamp": [
+          "#150701",
+          "#312115",
+          "#503e31",
+          "#705d50",
+          "#927e70",
+          "#b6a092",
+          "#dac4b5",
+          "#ffeadc"
+        ]
+      }
+    },
+    "sceneColors": {
+      "source": "scene.js (constante C)",
+      "note": "Tonos que viven solo en la escena canvas y no en tokens.css.",
+      "values": {
+        "skin": "#f0c7a4",
+        "skinD": "#d49a7a",
+        "hair": "#3b2620",
+        "hairL": "#5c3b2b",
+        "brow": "#2a1a17",
+        "tee": "#141016",
+        "teeL": "#2a2229",
+        "cat": "#f7efe3",
+        "woodL": "#a8714a",
+        "brick": "#2c2130"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Solo el nombre del héroe (--text-hero), con sombra de texto 4px 4px 0 tinta; 42px en móvil."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Títulos de sección (--text-xl), text-wrap: balance."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Título del proyecto en el detalle del inventario (--text-lg)."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Rol en la bitácora y título de certificaciones."
+      },
+      "body-lg": {
+        "displayName": "Body grande",
+        "purpose": "Texto de Sobre mí (máx. 34em) y email de contacto (--text-md)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Base del sitio (--text-base); diálogo a 20px y máx. 46ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Badges, chips y etiquetas de la escena."
+      }
+    },
+    "shadows": [
+      {
+        "name": "px-border",
+        "value": "0 -4px 0 0 var(--ink), 0 4px 0 0 var(--ink), -4px 0 0 0 var(--ink), 4px 0 0 0 var(--ink)",
+        "purpose": "Borde pixel de 4px con esquinas recortadas; marco de toda caja."
+      },
+      {
+        "name": "px-border-inverse",
+        "value": "0 -4px 0 0 var(--paper), 0 4px 0 0 var(--paper), -4px 0 0 0 var(--paper), 4px 0 0 0 var(--paper)",
+        "purpose": "Mismo borde en papel para botones sobre tinta (contacto, 404). Hoy escrito a mano, sin token."
+      },
+      {
+        "name": "key-base",
+        "value": "0 8px 0 0 var(--red)",
+        "purpose": "Base de tecla del botón primario; fog en fantasma, slate en fantasma oscuro."
+      },
+      {
+        "name": "key-base-compact",
+        "value": "0 6px 0 0 var(--red)",
+        "purpose": "Base del CTA de nav y del botón volver arriba."
+      },
+      {
+        "name": "dialog-base",
+        "value": "var(--px-border), 0 0 0 4px var(--ink), 0 8px 0 0 var(--wood-dk)",
+        "purpose": "Doble marco y apoyo de madera de la caja de diálogo."
+      },
+      {
+        "name": "tag-ring",
+        "value": "0 0 0 3px var(--ink)",
+        "purpose": "Anillo de badges, etiquetas de escena y punto de la bitácora (4px en la placa del hablante)."
+      },
+      {
+        "name": "text-drop",
+        "value": "4px 4px 0 var(--ink)",
+        "purpose": "Sombra sólida del nombre del héroe sobre la escena (3px subtítulo, 2px estado)."
+      },
+      {
+        "name": "slot-selected-ring",
+        "value": "var(--px-border), 0 0 0 4px var(--orange)",
+        "purpose": "Slot de inventario elegido."
+      }
+    ],
+    "motion": [
+      {
+        "name": "dur",
+        "value": "80ms steps(1)",
+        "purpose": "Subida y hundimiento de botones; sin easing."
+      },
+      {
+        "name": "to-top",
+        "value": "120ms steps(2)",
+        "purpose": "Aparición del botón volver arriba."
+      },
+      {
+        "name": "blink",
+        "value": "1.2s steps(1) infinite",
+        "purpose": "Punto de estado lima."
+      },
+      {
+        "name": "bob",
+        "value": ".8s steps(2) infinite",
+        "purpose": "Caret del diálogo."
+      },
+      {
+        "name": "scene-tick",
+        "value": "12fps (setInterval 1000/12)",
+        "purpose": "Animación de la escena; pausada fuera de pantalla, con pestaña oculta y con prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "scene-wide",
+        "value": "1100px",
+        "purpose": "Encuadre ancho de la escena; héroe superpuesto."
+      },
+      {
+        "name": "hero-stack",
+        "value": "1099px",
+        "purpose": "El bloque del héroe pasa debajo de la escena."
+      },
+      {
+        "name": "mobile",
+        "value": "900px",
+        "purpose": "Menú desplegable, grillas a una columna, slots a dos columnas."
+      },
+      {
+        "name": "scene-narrow",
+        "value": "640px",
+        "purpose": "Encuadre angosto de la escena (escala 3x)."
+      },
+      {
+        "name": "small",
+        "value": "480px",
+        "purpose": "Se oculta el segundo párrafo del diálogo."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón primario",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Tecla naranja con base roja; acción principal (Ver proyectos, Email).",
+      "html": "<a class=\"ds-btn\" href=\"#\">Ver proyectos</a>",
+      "css": ".ds-btn{font-family:var(--font);font-weight:600;font-size:18px;line-height:1.2;display:inline-flex;align-items:center;gap:10px;padding:10px 20px;text-decoration:none;cursor:pointer;border:0;border-radius:0;background:var(--orange);color:var(--ink);box-shadow:var(--px-border),0 8px 0 0 var(--red);transition:transform 80ms steps(1);margin:4px 4px 12px}.ds-btn:hover{transform:translateY(-4px)}.ds-btn:active{transform:translateY(4px);box-shadow:var(--px-border)}.ds-btn:focus-visible{outline:3px dashed var(--orange);outline-offset:4px}"
+    },
+    {
+      "name": "Botón fantasma",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Tecla de papel con base niebla; acción secundaria (Descargar CV, GitHub).",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 9 9\" shape-rendering=\"crispEdges\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M4 0h1v5h1v-1h1v1h-1v1h-1v1h-1v-1h-1v-1h-1v-1h1v1h1zM0 8h9v1h-9z\"/></svg>Descargar CV</a>",
+      "css": ".ds-btn-ghost{font-family:var(--font);font-weight:600;font-size:18px;line-height:1.2;display:inline-flex;align-items:center;gap:10px;padding:10px 20px;text-decoration:none;cursor:pointer;border:0;border-radius:0;background:var(--paper);color:var(--ink);box-shadow:var(--px-border),0 8px 0 0 var(--fog);transition:transform 80ms steps(1);margin:4px 4px 12px}.ds-btn-ghost:hover{transform:translateY(-4px)}.ds-btn-ghost:active{transform:translateY(4px);box-shadow:var(--px-border)}.ds-btn-ghost:focus-visible{outline:3px dashed var(--orange);outline-offset:4px}"
+    },
+    {
+      "name": "Botón fantasma sobre tinta",
+      "kind": "button",
+      "refersTo": "button-ghost-dark",
+      "description": "Variante invertida en secciones oscuras: borde papel, base pizarra.",
+      "html": "<div class=\"ds-dark\"><a class=\"ds-btn-ghost-dark\" href=\"#\">LinkedIn</a></div>",
+      "css": ".ds-dark{background:var(--ink);padding:24px}.ds-btn-ghost-dark{font-family:var(--font);font-weight:600;font-size:18px;line-height:1.2;display:inline-flex;padding:10px 20px;text-decoration:none;border-radius:0;background:var(--ink);color:var(--paper);box-shadow:0 -4px 0 0 var(--paper),0 4px 0 0 var(--paper),-4px 0 0 0 var(--paper),4px 0 0 0 var(--paper),0 8px 0 0 var(--slate);transition:transform 80ms steps(1)}.ds-btn-ghost-dark:hover{transform:translateY(-4px)}.ds-btn-ghost-dark:active{transform:translateY(4px)}.ds-btn-ghost-dark:focus-visible{outline:3px dashed var(--orange);outline-offset:4px}"
+    },
+    {
+      "name": "Navegación",
+      "kind": "nav",
+      "refersTo": "nav-cta",
+      "description": "Barra de tinta de 56px con monograma, cursor pixel en el link activo y CTA compacto.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-mark\" href=\"#\"><span class=\"ds-mono\">LA</span>Lisandro Acuña</a><div class=\"ds-links\"><a href=\"#\" class=\"on\"><svg class=\"ds-cur\" viewBox=\"0 0 2 3\" aria-hidden=\"true\"><path d=\"M0 0h1v1h1v1h-1v1h-1z\"/></svg>Sobre mí</a><a href=\"#\"><svg class=\"ds-cur\" viewBox=\"0 0 2 3\" aria-hidden=\"true\"><path d=\"M0 0h1v1h1v1h-1v1h-1z\"/></svg>Proyectos</a><a href=\"#\" class=\"ds-cta\">Contacto</a></div></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 32px;background:var(--ink);color:var(--paper);font-family:var(--font)}.ds-mark{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:600;color:inherit;text-decoration:none}.ds-mono{width:32px;height:32px;display:grid;place-items:center;background:var(--orange);color:var(--ink);font-size:15px;font-weight:700}.ds-links{display:flex;align-items:center;gap:24px}.ds-links a{display:inline-flex;align-items:center;gap:8px;color:var(--text-inv-2);text-decoration:none;font-size:18px}.ds-links a:hover,.ds-links a.on{color:var(--paper)}.ds-cur{width:8px;height:12px;fill:var(--orange);visibility:hidden;shape-rendering:crispEdges}.ds-links a:hover .ds-cur,.ds-links a.on .ds-cur{visibility:visible}.ds-links a:focus-visible{outline:3px dashed var(--orange);outline-offset:4px}.ds-links .ds-cta{color:var(--ink);background:var(--orange);padding:4px 14px;font-weight:600;box-shadow:0 -3px 0 0 var(--ink),0 3px 0 0 var(--ink),-3px 0 0 0 var(--ink),3px 0 0 0 var(--ink),0 6px 0 0 var(--red)}.ds-links .ds-cta:hover{color:var(--ink);background:var(--sun)}"
+    },
+    {
+      "name": "Caja de diálogo RPG",
+      "kind": "custom",
+      "refersTo": "dialog",
+      "description": "Firma del sistema: panel de papel con placa de nombre, caret que rebota y acciones al pie.",
+      "html": "<div class=\"ds-dialog\"><span class=\"ds-speaker\">LISANDRO</span><p>Estudio Ingeniería Informática y construyo proyectos de backend reales.<svg class=\"ds-caret\" viewBox=\"0 0 3 2\" aria-hidden=\"true\"><path d=\"M0 0h3v1h-1v1h-1v-1h-1z\"/></svg></p></div>",
+      "css": ".ds-dialog{position:relative;margin:30px 8px 16px;padding:26px 28px 28px;background:var(--paper);color:var(--ink);font-family:var(--font);box-shadow:var(--px-border),0 0 0 4px var(--ink),0 8px 0 0 var(--wood-dk)}.ds-dialog p{font-size:20px;line-height:1.5;max-width:46ch;margin:0}.ds-speaker{position:absolute;top:-22px;left:20px;padding:4px 12px;background:var(--orange);color:var(--ink);font-size:16px;font-weight:600;box-shadow:0 0 0 4px var(--ink)}.ds-caret{display:inline-block;width:12px;height:8px;margin-left:6px;vertical-align:middle;fill:var(--ink);shape-rendering:crispEdges;animation:ds-bob .8s steps(2) infinite}@keyframes ds-bob{50%{transform:translateY(3px)}}@media (prefers-reduced-motion:reduce){.ds-caret{animation:none}}"
+    },
+    {
+      "name": "Slot de inventario",
+      "kind": "custom",
+      "refersTo": "slot",
+      "description": "Pestaña del inventario de proyectos; hover resplandor, elegido en tinta con anillo naranja.",
+      "html": "<div class=\"ds-slots\"><button class=\"ds-slot\" aria-selected=\"true\">SimpleStock<small>Java · Spring Boot</small></button><button class=\"ds-slot\" aria-selected=\"false\">Dólar Tracker<small>Python · SQL</small></button></div>",
+      "css": ".ds-slots{display:grid;gap:16px;max-width:300px}.ds-slot{font-family:var(--font);font-size:19px;font-weight:500;text-align:left;color:var(--ink);margin:4px;padding:12px 14px;background:var(--paper);border:0;border-radius:0;cursor:pointer;box-shadow:var(--px-border)}.ds-slot small{display:block;font-size:14px;font-weight:400;color:var(--text-3)}.ds-slot:hover{background:var(--glow)}.ds-slot:focus-visible{outline:3px dashed var(--orange);outline-offset:4px}.ds-slot[aria-selected=\"true\"]{background:var(--ink);color:var(--paper);box-shadow:var(--px-border),0 0 0 4px var(--orange)}.ds-slot[aria-selected=\"true\"] small{color:var(--text-inv-2)}"
+    },
+    {
+      "name": "Badge y chips",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Estado del proyecto (lima/ámbar con anillo) y tecnologías (tinta con texto ámbar).",
+      "html": "<div class=\"ds-row\"><span class=\"ds-badge\">Terminado</span><span class=\"ds-badge ds-wip\">En desarrollo · v0.5</span></div><ul class=\"ds-chips\"><li>Java</li><li>Spring Boot</li><li>SQLite</li></ul>",
+      "css": ".ds-row{display:flex;gap:16px;margin:6px 6px 12px}.ds-badge{font-family:var(--font);font-size:14px;font-weight:600;padding:2px 8px;color:var(--ink);background:var(--lime);box-shadow:0 0 0 3px var(--ink)}.ds-wip{background:var(--sun)}.ds-chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}.ds-chips li{font-family:var(--font);font-size:14px;padding:2px 8px;background:var(--ink);color:var(--sun)}"
+    },
+    {
+      "name": "Ficha de personaje",
+      "kind": "card",
+      "refersTo": "sheet-head",
+      "description": "Caja pixel de papel con encabezado de tinta y filas separadas por línea punteada.",
+      "html": "<div class=\"ds-sheet\"><div class=\"ds-sheet-head\">Ficha</div><dl><div><dt>Rol</dt><dd>Backend Trainee</dd></div><div><dt>Base</dt><dd>Buenos Aires</dd></div></dl></div>",
+      "css": ".ds-sheet{margin:4px;max-width:360px;background:var(--paper);box-shadow:var(--px-border);font-family:var(--font);color:var(--ink)}.ds-sheet-head{background:var(--ink);color:var(--sun);font-weight:600;padding:8px 18px;font-size:17px}.ds-sheet dl{margin:0;padding:8px 18px 14px}.ds-sheet dl div{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:8px 0;border-bottom:2px dashed var(--fog)}.ds-sheet dl div:last-child{border-bottom:0}.ds-sheet dt{color:var(--text-3);font-size:16px}.ds-sheet dd{margin:0;font-weight:500;font-size:19px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "El cuarto de noche con luz de lámpara",
+    "overview": "La página es un corte transversal de una casa en pixel art: arriba el cuarto donde trabaja el personaje, abajo el sótano con los racks (el backend, \"lo que no se ve\"). Todo el sistema sale de ese cuarto: la paleta es la de una habitación de noche iluminada por una lámpara (tinta, pared ciruela, madera, ámbar), los paneles de lectura son papel, y las acciones son teclas naranjas que se hunden al apretarlas. La densidad es moderada y legible: el juego decora, nunca tapa el contenido.\n\nEl píxel manda en todo: una sola fuente pixel (Pixelify Sans) sin suavizado (`-webkit-font-smoothing: none`), canvas escalados con `image-rendering: pixelated`, íconos SVG con `shape-rendering: crispEdges`, bordes de 4px hechos con sombras sólidas que dejan las esquinas recortadas, y movimiento por pasos (`steps()`), nunca por curvas. No hay radios, no hay sombras difusas, no hay gradientes decorativos.\n\nLas secciones siguen el corte de la casa: cada una se separa de la anterior con una viga de piso (madera con clavos de tinta), alternando papel, papel tostado y tinta, como pisos de una misma construcción.",
+    "keyCharacteristics": [
+      "Pixel art lofi cálido: tinta, ciruela, madera, naranja y ámbar sobre papel.",
+      "Una sola tipografía pixel, sin antialiasing, en todos los roles.",
+      "Bordes de 4px con esquinas recortadas; cero border-radius.",
+      "Profundidad por bloques sólidos desplazados (base de tecla, sombra de texto a 4px), nunca por desenfoque.",
+      "Movimiento en pasos discretos (80ms, `steps(1)`), escena a 12 fps, todo quieto con `prefers-reduced-motion`.",
+      "Mecánicas de RPG como lenguaje de interfaz: caja de diálogo con placa de nombre, inventario de proyectos, ficha de personaje, medallas."
+    ],
+    "rules": [
+      {
+        "name": "The Lamp Rule",
+        "body": "El naranja es la única voz de acción; el ámbar es luz y hover; el lima es solo estado vivo. Si algo naranja no se puede apretar ni es el foco, sobra.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paper or Ink Rule",
+        "body": "Todo texto de lectura vive sobre papel (paper / paper-2) o sobre tinta, con los pares de texto AA del token (text / text-2 / text-3 sobre papel; paper / text-inv-2 sobre tinta). Sobre la escena solo va el héroe, y siempre con sombra sólida de tinta.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Typeface Rule",
+        "body": "Pixelify Sans en todo, sin antialiasing. Nunca una segunda familia ni una fuente del sistema como display.",
+        "section": "typography"
+      },
+      {
+        "name": "The Floor Beam Rule",
+        "body": "Cada sección que sigue a otra arranca con una viga de 12px: 8px de madera con clavos de tinta cada 56px y 4px de tinta abajo. Es el corte de la casa que sigue hacia el sótano; no se reemplaza por líneas o márgenes.",
+        "section": "layout"
+      },
+      {
+        "name": "The Notched Corner Rule",
+        "body": "Todo borde es de 4px hecho con sombras sólidas en los cuatro lados, de modo que las esquinas quedan recortadas. Ni `border-radius` ni `border` común para el marco de una caja.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Key Base Rule",
+        "body": "Lo que se aprieta descansa sobre una base sólida más oscura. Hover sube 4px; active baja 4px y pierde la base. Lo que no se aprieta no tiene base.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** enmarcar cada caja con el borde pixel de 4px (`--px-border`), invertido a papel sobre tinta.",
+      "**Do** darle base sólida de 8px a todo lo apretable y hacerlo subir 4px en hover y bajar 4px en active, con `steps(1)` a 80ms.",
+      "**Do** usar el naranja solo para acción y foco, el ámbar para luz y hover, y el lima solo para estado vivo.",
+      "**Do** separar secciones consecutivas con la viga de piso y alternar papel, papel tostado y tinta.",
+      "**Do** dibujar íconos y arte en grillas de pocos píxeles con `crispEdges` o `image-rendering: pixelated`, escalados por enteros.",
+      "**Do** mantener el texto de lectura sobre papel o tinta con los pares AA del token, y usar `red-text` (no `red`) para texto rojo sobre papel.",
+      "**Do** dejar la escena y las animaciones quietas con `prefers-reduced-motion`."
+    ],
+    "donts": [
+      "**Don't** usar `border-radius`, sombras con desenfoque ni gradientes decorativos; las únicas franjas son la viga y las líneas punteadas.",
+      "**Don't** sumar una segunda tipografía ni activar el suavizado de fuente.",
+      "**Don't** animar con curvas de easing; el movimiento es por pasos.",
+      "**Don't** esconder contenido detrás de mecánicas de juego: el inventario, el diálogo y la ficha son lectura directa, sin desbloqueos.",
+      "**Don't** usar el lima ni el naranja como decoración de fondo."
+    ]
+  }
+}

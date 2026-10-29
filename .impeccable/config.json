@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "styles.css"
+        ],
+        "createdAt": "2026-10-29T00:00:54.902Z",
+        "reason": "Claude: dashed pixel line of the timeline (.log-item::after), intentional in the pixel world"
+      }
+    ]
+  }
+}

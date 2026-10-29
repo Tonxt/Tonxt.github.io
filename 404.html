@@ -5,43 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Página no encontrada — Lisandro Acuña</title>
   <meta name="robots" content="noindex" />
-  <meta name="theme-color" content="#141519" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#221a26" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="identidad/tokens.css?v=9" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&display=swap" />
+  <link rel="stylesheet" href="/identidad/tokens.css?v=14" />
   <style>
     body {
       margin: 0; min-height: 100vh;
       display: flex; align-items: center; justify-content: center; text-align: center;
-      background: var(--bg); color: var(--text);
-      font-family: var(--font-sans); padding: 2rem;
+      background: var(--ink); color: var(--paper);
+      font-family: var(--font); padding: 2rem; -webkit-font-smoothing: none;
     }
-    .code {
-      font-family: var(--font-mono); color: var(--accent);
-      font-size: var(--text-sm); letter-spacing: 0.14em; text-transform: uppercase;
-      margin: 0;
-    }
-    h1 {
-      font-family: var(--font-display); font-weight: 500;
-      font-size: clamp(2rem, 8vw, 3.75rem); letter-spacing: var(--tracking-tight);
-      margin: 0.75rem 0 0.5rem;
-    }
-    p.msg { color: var(--text-secondary); margin: 0 0 2rem; }
+    .code { color: var(--sun); font-size: 20px; margin: 0; }
+    h1 { font-size: clamp(40px, 8vw, 64px); font-weight: 700; line-height: 1; margin: 12px 0; text-shadow: 4px 4px 0 var(--wall); }
+    p.msg { color: var(--text-inv-2); margin: 0 0 32px; font-size: 19px; }
     a.home {
-      display: inline-block; font-family: var(--font-sans); font-weight: 500;
-      background: var(--accent); color: var(--text-on-accent);
-      padding: 12px 22px; border-radius: var(--radius-md); text-decoration: none;
+      display: inline-block; font-weight: 600; font-size: 18px; text-decoration: none;
+      background: var(--orange); color: var(--ink); padding: 10px 20px;
+      box-shadow: 0 -4px 0 0 var(--paper), 0 4px 0 0 var(--paper), -4px 0 0 0 var(--paper), 4px 0 0 0 var(--paper), 0 8px 0 0 var(--red);
     }
-    a.home:hover { background: var(--accent-hover); }
+    a.home:hover { transform: translateY(-4px); }
+    a.home:focus-visible { outline: 3px dashed var(--orange); outline-offset: 6px; }
   </style>
 </head>
 <body>
   <main>
     <p class="code">Error 404</p>
     <h1>Página no encontrada</h1>
-    <p class="msg">La página que buscás no existe o se movió.</p>
+    <p class="msg">Este cuarto está vacío. La página que buscás no existe o se movió.</p>
     <a class="home" href="/">Volver al inicio</a>
   </main>
 </body>
