@@ -26,10 +26,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" />
 
-  <link rel="stylesheet" href="identidad/tokens.css?v=14" />
-  <link rel="stylesheet" href="styles.css?v=14" />
-  <script src="script.js?v=14" defer></script>
-  <script src="scene.js?v=14" defer></script>
+  <link rel="stylesheet" href="identidad/tokens.css?v=15" />
+  <link rel="stylesheet" href="styles.css?v=15" />
+  <script src="script.js?v=15" defer></script>
+  <script src="scene.js?v=15" defer></script>
 
   <!-- Datos estructurados (SEO) -->
   <script type="application/ld+json">
@@ -78,10 +78,10 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="nav-links" id="primary-nav" aria-label="Navegación principal">
-        <a href="#sobre-mi"><svg class="cur" aria-hidden="true"><use href="#i-cur"/></svg><span data-i18n="nav.about">Sobre mí</span></a>
-        <a href="#experiencia"><svg class="cur" aria-hidden="true"><use href="#i-cur"/></svg><span data-i18n="nav.exp">Experiencia</span></a>
-        <a href="#estudios"><svg class="cur" aria-hidden="true"><use href="#i-cur"/></svg><span data-i18n="nav.edu">Estudios</span></a>
         <a href="#proyectos"><svg class="cur" aria-hidden="true"><use href="#i-cur"/></svg><span data-i18n="nav.projects">Proyectos</span></a>
+        <a href="#estudios"><svg class="cur" aria-hidden="true"><use href="#i-cur"/></svg><span data-i18n="nav.edu">Estudios</span></a>
+        <a href="#experiencia"><svg class="cur" aria-hidden="true"><use href="#i-cur"/></svg><span data-i18n="nav.exp">Experiencia</span></a>
+        <a href="#sobre-mi"><svg class="cur" aria-hidden="true"><use href="#i-cur"/></svg><span data-i18n="nav.about">Sobre mí</span></a>
         <a href="#contacto" class="nav-cta" data-i18n="nav.contact">Contacto</a>
         <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">EN</button>
       </nav>
@@ -117,111 +117,8 @@
       </div>
     </section>
 
-    <!-- ============ Sobre mí ============ -->
-    <section id="sobre-mi" class="section">
-      <div class="container about">
-        <h2 class="section-title" data-i18n="about.title">Curiosidad con método</h2>
-        <div class="about-grid">
-          <p class="about-text" data-i18n="about.body">
-            Soy Lisandro, estudiante de primer año de Ingeniería Informática en la
-            UADE. Lo que más me atrapa es lo que no se ve: cómo un sistema recibe
-            un pedido, lo procesa y guarda la información. Hoy estoy aprendiendo
-            backend con Java y Python sobre bases de datos SQL, y en el horizonte
-            tengo la inteligencia artificial y el machine learning. Cada proyecto
-            que encaro es una excusa para aprender algo nuevo.
-          </p>
-          <div class="sheet px-box">
-            <p class="sheet-head" data-i18n="sheet.title">Ficha del personaje</p>
-            <dl>
-              <div><dt data-i18n="sheet.class">Clase</dt><dd>Backend Developer Trainee</dd></div>
-              <div><dt data-i18n="sheet.base">Base</dt><dd>Buenos Aires, AR</dd></div>
-              <div><dt data-i18n="sheet.study">Estudios</dt><dd data-i18n="sheet.study.v">Ing. Informática · UADE</dd></div>
-              <div><dt data-i18n="sheet.gear">Equipo</dt><dd>Java · Python · SQL · Git</dd></div>
-              <div><dt data-i18n="sheet.quest">Busca</dt><dd data-i18n="sheet.quest.v">Primer puesto trainee o junior</dd></div>
-            </dl>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ Experiencia ============ -->
-    <section id="experiencia" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title" data-i18n="exp.title">Aprender haciendo</h2>
-        <ol class="log">
-          <li class="log-item">
-            <span class="log-date" data-i18n="exp.item1.date">2026 — Actual</span>
-            <div>
-              <h3 class="log-role" data-i18n="exp.item1.role">Proyectos personales de backend y datos</h3>
-              <p class="log-org" data-i18n="exp.item1.org">Independiente</p>
-              <p class="log-desc" data-i18n="exp.item1.desc">
-                Diseño y dirección de SimpleStock, un sistema de caja y stock para kioscos
-                (Java, Spring Boot, SQLite, React) con un piloto real, y desarrollo de punta a punta de dos
-                proyectos de datos en Python y SQL: un análisis y un pipeline automatizado que consume una API.
-              </p>
-            </div>
-          </li>
-          <li class="log-item">
-            <span class="log-date">2026</span>
-            <div>
-              <h3 class="log-role" data-i18n="exp.item2.role">Competencia de programación en Python</h3>
-              <p class="log-org">UADE</p>
-              <p class="log-desc" data-i18n="exp.item2.desc">
-                Desarrollo de proyectos en equipo y contra reloj: resolución de
-                problemas, lógica y colaboración sobre código real.
-              </p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ============ Estudios ============ -->
-    <section id="estudios" class="section">
-      <div class="container">
-        <h2 class="section-title" data-i18n="edu.title">Formación</h2>
-        <ol class="log">
-          <li class="log-item">
-            <span class="log-date" data-i18n="edu.item1.date">2026 — En curso</span>
-            <div>
-              <h3 class="log-role" data-i18n="edu.item1.role">Ingeniería Informática</h3>
-              <p class="log-org">UADE — Universidad Argentina de la Empresa</p>
-              <p class="log-desc" data-i18n="edu.item1.desc">
-                Primer año. Foco personal en backend, bases de datos y programación.
-              </p>
-            </div>
-          </li>
-        </ol>
-        <h3 class="certs-title" data-i18n="edu.certs.title">Certificaciones</h3>
-        <ul class="certs-list">
-          <li class="cert-item px-box">
-            <svg class="medal" viewBox="0 0 8 10" aria-hidden="true"><path class="m-rib" d="M1 0h2v3h-1v1h-1zM5 0h2v4h-1v-1h-1z"/><path class="m-coin" d="M2 3h4v1h1v4h-1v1h-4v-1h-1v-4h1z"/><path class="m-hi" d="M3 5h1v2h-1z"/></svg>
-            <div>
-              <p class="cert-name"><a class="ext" href="https://www.credly.com/badges/9691ea7a-b1af-4a07-8f65-4fef71dd2e0e" target="_blank" rel="noopener">Networking Basics</a></p>
-              <p class="cert-issuer">Cisco · <span data-i18n="edu.certs.d1">Mar. 2026</span></p>
-            </div>
-          </li>
-          <li class="cert-item px-box">
-            <svg class="medal" viewBox="0 0 8 10" aria-hidden="true"><path class="m-rib" d="M1 0h2v3h-1v1h-1zM5 0h2v4h-1v-1h-1z"/><path class="m-coin" d="M2 3h4v1h1v4h-1v1h-4v-1h-1v-4h1z"/><path class="m-hi" d="M3 5h1v2h-1z"/></svg>
-            <div>
-              <p class="cert-name" data-i18n="edu.certs.python.name">Introducción a la programación con Python</p>
-              <p class="cert-issuer">Santander Open Academy · <span data-i18n="edu.certs.d2">Feb. 2026</span></p>
-              <p class="cert-serial" data-i18n="edu.certs.python.serial">N° de serie: OA-2026-0222002281478</p>
-            </div>
-          </li>
-          <li class="cert-item px-box">
-            <svg class="medal" viewBox="0 0 8 10" aria-hidden="true"><path class="m-rib" d="M1 0h2v3h-1v1h-1zM5 0h2v4h-1v-1h-1z"/><path class="m-coin" d="M2 3h4v1h1v4h-1v1h-4v-1h-1v-4h1z"/><path class="m-hi" d="M3 5h1v2h-1z"/></svg>
-            <div>
-              <p class="cert-name"><a class="ext" href="https://www.credly.com/badges/1287659c-d565-41d3-bc9e-bd64a0c68e0d" target="_blank" rel="noopener">Introduction to Cybersecurity</a></p>
-              <p class="cert-issuer">Cisco · <span data-i18n="edu.certs.d2">Feb. 2026</span></p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
     <!-- ============ Proyectos: inventario ============ -->
-    <section id="proyectos" class="section section-alt">
+    <section id="proyectos" class="section">
       <div class="container">
         <h2 class="section-title" data-i18n="proj.title">Cosas que construí</h2>
         <p class="section-lead" data-i18n="proj.lead">
@@ -331,6 +228,109 @@
               </ul>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Estudios ============ -->
+    <section id="estudios" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title" data-i18n="edu.title">Formación</h2>
+        <ol class="log">
+          <li class="log-item">
+            <span class="log-date" data-i18n="edu.item1.date">2026 — En curso</span>
+            <div>
+              <h3 class="log-role" data-i18n="edu.item1.role">Ingeniería Informática</h3>
+              <p class="log-org">UADE — Universidad Argentina de la Empresa</p>
+              <p class="log-desc" data-i18n="edu.item1.desc">
+                Primer año. Foco personal en backend, bases de datos y programación.
+              </p>
+            </div>
+          </li>
+        </ol>
+        <h3 class="certs-title" data-i18n="edu.certs.title">Certificaciones</h3>
+        <ul class="certs-list">
+          <li class="cert-item px-box">
+            <svg class="medal" viewBox="0 0 8 10" aria-hidden="true"><path class="m-rib" d="M1 0h2v3h-1v1h-1zM5 0h2v4h-1v-1h-1z"/><path class="m-coin" d="M2 3h4v1h1v4h-1v1h-4v-1h-1v-4h1z"/><path class="m-hi" d="M3 5h1v2h-1z"/></svg>
+            <div>
+              <p class="cert-name"><a class="ext" href="https://www.credly.com/badges/9691ea7a-b1af-4a07-8f65-4fef71dd2e0e" target="_blank" rel="noopener">Networking Basics</a></p>
+              <p class="cert-issuer">Cisco · <span data-i18n="edu.certs.d1">Mar. 2026</span></p>
+            </div>
+          </li>
+          <li class="cert-item px-box">
+            <svg class="medal" viewBox="0 0 8 10" aria-hidden="true"><path class="m-rib" d="M1 0h2v3h-1v1h-1zM5 0h2v4h-1v-1h-1z"/><path class="m-coin" d="M2 3h4v1h1v4h-1v1h-4v-1h-1v-4h1z"/><path class="m-hi" d="M3 5h1v2h-1z"/></svg>
+            <div>
+              <p class="cert-name" data-i18n="edu.certs.python.name">Introducción a la programación con Python</p>
+              <p class="cert-issuer">Santander Open Academy · <span data-i18n="edu.certs.d2">Feb. 2026</span></p>
+              <p class="cert-serial" data-i18n="edu.certs.python.serial">N° de serie: OA-2026-0222002281478</p>
+            </div>
+          </li>
+          <li class="cert-item px-box">
+            <svg class="medal" viewBox="0 0 8 10" aria-hidden="true"><path class="m-rib" d="M1 0h2v3h-1v1h-1zM5 0h2v4h-1v-1h-1z"/><path class="m-coin" d="M2 3h4v1h1v4h-1v1h-4v-1h-1v-4h1z"/><path class="m-hi" d="M3 5h1v2h-1z"/></svg>
+            <div>
+              <p class="cert-name"><a class="ext" href="https://www.credly.com/badges/1287659c-d565-41d3-bc9e-bd64a0c68e0d" target="_blank" rel="noopener">Introduction to Cybersecurity</a></p>
+              <p class="cert-issuer">Cisco · <span data-i18n="edu.certs.d2">Feb. 2026</span></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ Experiencia ============ -->
+    <section id="experiencia" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="exp.title">Aprender haciendo</h2>
+        <ol class="log">
+          <li class="log-item">
+            <span class="log-date" data-i18n="exp.item1.date">2026 — Actual</span>
+            <div>
+              <h3 class="log-role" data-i18n="exp.item1.role">Proyectos personales de backend y datos</h3>
+              <p class="log-org" data-i18n="exp.item1.org">Independiente</p>
+              <p class="log-desc" data-i18n="exp.item1.desc">
+                Diseño y dirección de SimpleStock, un sistema de caja y stock para kioscos
+                (Java, Spring Boot, SQLite, React) con un piloto real, y desarrollo de punta a punta de dos
+                proyectos de datos en Python y SQL: un análisis y un pipeline automatizado que consume una API.
+              </p>
+            </div>
+          </li>
+          <li class="log-item">
+            <span class="log-date">2026</span>
+            <div>
+              <h3 class="log-role" data-i18n="exp.item2.role">Competencia de programación en Python</h3>
+              <p class="log-org">UADE</p>
+              <p class="log-desc" data-i18n="exp.item2.desc">
+                Desarrollo de proyectos en equipo y contra reloj: resolución de
+                problemas, lógica y colaboración sobre código real.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ Sobre mí ============ -->
+    <section id="sobre-mi" class="section section-alt">
+      <div class="container about">
+        <h2 class="section-title" data-i18n="about.title">Curiosidad con método</h2>
+        <div class="about-grid">
+          <p class="about-text" data-i18n="about.body">
+            Soy Lisandro, estudiante de primer año de Ingeniería Informática en la
+            UADE. Lo que más me atrapa es lo que no se ve: cómo un sistema recibe
+            un pedido, lo procesa y guarda la información. Hoy estoy aprendiendo
+            backend con Java y Python sobre bases de datos SQL, y en el horizonte
+            tengo la inteligencia artificial y el machine learning. Cada proyecto
+            que encaro es una excusa para aprender algo nuevo.
+          </p>
+          <div class="sheet px-box">
+            <p class="sheet-head" data-i18n="sheet.title">Ficha del personaje</p>
+            <dl>
+              <div><dt data-i18n="sheet.class">Clase</dt><dd>Backend Developer Trainee</dd></div>
+              <div><dt data-i18n="sheet.base">Base</dt><dd>Buenos Aires, AR</dd></div>
+              <div><dt data-i18n="sheet.study">Estudios</dt><dd data-i18n="sheet.study.v">Ing. Informática · UADE</dd></div>
+              <div><dt data-i18n="sheet.gear">Equipo</dt><dd>Java · Python · SQL · Git</dd></div>
+              <div><dt data-i18n="sheet.quest">Busca</dt><dd data-i18n="sheet.quest.v">Primer puesto trainee o junior</dd></div>
+            </dl>
+          </div>
         </div>
       </div>
     </section>
