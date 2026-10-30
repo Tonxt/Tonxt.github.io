@@ -82,7 +82,7 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   let W, H, S, mode, deskX, floorY;
-  const st = { t: 0, look: 0, blink: 0, action: 'type', actionT: 0, wave: 0, surprise: 0, idle: 0 };
+  const st = { t: 0, look: 0, blink: 0, action: 'type', actionT: 0, wave: 0, surprise: 0, idle: 0, angry: 0 };
   const packets = [];
   const lights = [];
 
@@ -112,6 +112,10 @@
 
   const charX = () => deskX + 34;
   const charY = () => floorY - 62;
+  const shelfX = () => deskX + (mode === 'narrow' ? 56 : -6);
+  const shelfY = () => (mode === 'narrow' ? 8 : 16);
+  const plushX = () => shelfX() + 39;
+  const plushY = () => shelfY() + 14 - PLUSH.length;
 
   // ---- el cuarto ----
   function drawRoom() {
@@ -167,14 +171,23 @@
     }
 
     // estante con libros y una cajita { }
-    const shx = deskX + (mode === 'narrow' ? 56 : -6), shy = mode === 'narrow' ? 8 : 16;
+    const shx = shelfX(), shy = shelfY();
     const shw = mode === 'narrow' ? 52 : 65;
     px(shx, shy + 14, shw, 2, C.wood); px(shx, shy + 16, shw, 1, C.ink);
     let bx = shx + 2;
     [[C.red, 12], [C.teal, 10], [C.sun, 13], [C.plum, 9], [C.orange, 12], [C.fog, 11], [C.green, 10]].forEach(([c, h], i) => {
       px(bx, shy + 14 - h, 4, h, c); px(bx, shy + 16 - h, 4, 1, C.ink); bx += i === 3 ? 7 : 5;
     });
-    sprite(PLUSH, shx + 39, shy + 14 - PLUSH.length, PMAP);
+    // enojado: cejas en V, tiembla y le sale una marquita roja
+    if (st.angry > 0) {
+      const rows = PLUSH.slice();
+      rows[2] = '.wkwwwwwkf.';
+      rows[3] = '.wwkkwkkwf.';
+      const ox = plushX() + (st.angry % 2), oy = plushY();
+      sprite(rows, ox, oy, PMAP);
+      px(ox + 10, oy - 3, 1, 2, C.red); px(ox + 12, oy - 3, 1, 2, C.red);
+      px(ox + 9, oy - 2, 2, 1, C.red); px(ox + 12, oy - 2, 2, 1, C.red);
+    } else sprite(PLUSH, plushX(), plushY(), PMAP);
     if (mode !== 'narrow') { px(shx + 51, shy + 6, 14, 8, C.steel); px(shx + 53, shy + 8, 1, 4, C.lime); px(shx + 62, shy + 8, 1, 4, C.lime); }
 
     // sótano
@@ -356,9 +369,13 @@
     st.idle = 0;
     if (st.action === 'sleep') { st.action = 'type'; st.actionT = 0; }
   }, { passive: true });
-  cv.addEventListener('click', () => {
+  cv.addEventListener('click', (e) => {
+    const r = cv.getBoundingClientRect();
+    mouse.x = (e.clientX - r.left) / S; mouse.y = (e.clientY - r.top) / S;
     const cx = charX() + 9, cy = charY();
     if (Math.abs(mouse.x - cx) < 14 && mouse.y > cy - 6 && mouse.y < cy + 26) st.surprise = 10;
+    const bx = plushX(), by = plushY();
+    if (mouse.x >= bx - 2 && mouse.x <= bx + 12 && mouse.y >= by - 2 && mouse.y <= by + PLUSH.length + 1) st.angry = 18;
     packets.push({ d: 0, c: [C.ice, C.sun, C.orange][packets.length % 3] });
   });
   // los botones del diálogo mandan datos al sótano
@@ -375,6 +392,7 @@
     if (over && st.wave <= 0) st.wave = 16;
     if (st.wave > 0) st.wave--;
     if (st.surprise > 0) st.surprise--;
+    if (st.angry > 0) st.angry--;
     if (st.blink > 0) st.blink--; else if (Math.random() < 0.03) st.blink = 2;
     st.actionT++;
     if (st.idle > 12 * 25 && st.action !== 'sleep') { st.action = 'sleep'; st.actionT = 0; }
