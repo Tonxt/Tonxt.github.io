@@ -53,6 +53,26 @@
     '..kkkkwwwwwwwkk.',
   ];
   const CMAP = { w: C.cat, k: C.ink, n: '#e8a0a0' };
+  // Osito de peluche blanco con un corazón y una S
+  // sentado, cabeza grande con hocico y las patas hacia adelante
+  const PLUSH = [
+    '.ww.....wf.',
+    'wnwwwwwwwnf',
+    '.wwwwwwwwf.',
+    '.wwkwwwkwf.',
+    '.wwwmmmwwf.',
+    '.wwmmkmmwf.',
+    '..wwmmmwf..',
+    '.wwrrwrrwf.',
+    'wwrrsssrrwf',
+    'wwrrsrrrrwf',
+    'wwrrsssrrwf',
+    'wwrrrrsrrwf',
+    '.wwrsssrwf.',
+    'wwwwwrwwwwf',
+    'mmmw...wmmm',
+  ];
+  const PMAP = { w: C.cat, f: C.fog, m: C.paper, k: C.ink, n: '#e8a0a0', r: C.red, s: C.cat };
 
   const cv = document.getElementById('scene');
   if (!cv) return;
@@ -148,13 +168,14 @@
 
     // estante con libros y una cajita { }
     const shx = deskX + (mode === 'narrow' ? 56 : -6), shy = mode === 'narrow' ? 8 : 16;
-    const shw = mode === 'narrow' ? 44 : 64;
+    const shw = mode === 'narrow' ? 52 : 65;
     px(shx, shy + 14, shw, 2, C.wood); px(shx, shy + 16, shw, 1, C.ink);
     let bx = shx + 2;
     [[C.red, 12], [C.teal, 10], [C.sun, 13], [C.plum, 9], [C.orange, 12], [C.fog, 11], [C.green, 10]].forEach(([c, h], i) => {
       px(bx, shy + 14 - h, 4, h, c); px(bx, shy + 16 - h, 4, 1, C.ink); bx += i === 3 ? 7 : 5;
     });
-    if (mode !== 'narrow') { px(shx + 46, shy + 6, 14, 8, C.steel); px(shx + 48, shy + 8, 1, 4, C.lime); px(shx + 57, shy + 8, 1, 4, C.lime); }
+    sprite(PLUSH, shx + 39, shy + 14 - PLUSH.length, PMAP);
+    if (mode !== 'narrow') { px(shx + 51, shy + 6, 14, 8, C.steel); px(shx + 53, shy + 8, 1, 4, C.lime); px(shx + 62, shy + 8, 1, 4, C.lime); }
 
     // sótano
     const by = floorY + 12;
