@@ -16,7 +16,7 @@ const t = {
     "hero.status":       "Abierto a oportunidades trainee · junior",
 
     "about.title":  "Curiosidad con método",
-    "about.body":   "Soy Lisandro, estudiante de primer año de Ingeniería Informática en la UADE. Lo que más me atrapa es lo que no se ve: cómo un sistema recibe un pedido, lo procesa y guarda la información. Hoy estoy aprendiendo backend con Java y Python sobre bases de datos SQL, y en el horizonte tengo la inteligencia artificial y el machine learning. Cada proyecto que encaro es una excusa para aprender algo nuevo.",
+    "about.body":   "Soy Lisandro, estudiante de Ingeniería Informática en la UADE. Lo que más me atrapa es lo que no se ve: cómo un sistema recibe un pedido, lo procesa y guarda la información. Hoy estoy aprendiendo backend con Java y Python sobre bases de datos SQL, y en el horizonte tengo la inteligencia artificial y el machine learning. Cada proyecto que encaro es una excusa para aprender algo nuevo.",
 
     "sheet.title":   "Ficha del personaje",
     "sheet.class":   "Clase",
@@ -38,7 +38,7 @@ const t = {
     "edu.title":            "Formación",
     "edu.item1.date":       "2026 — En curso",
     "edu.item1.role":       "Ingeniería Informática",
-    "edu.item1.desc":       "Primer año. Foco personal en backend, bases de datos y programación.",
+    "edu.item1.desc":       "Foco personal en backend, bases de datos y programación.",
     "edu.certs.title":      "Certificaciones",
     "edu.certs.python.name":   "Introducción a la programación con Python",
     "edu.certs.python.serial": "N° de serie: OA-2026-0222002281478",
@@ -85,7 +85,7 @@ const t = {
     "hero.status":       "Open to trainee · junior opportunities",
 
     "about.title":  "Curiosity with method",
-    "about.body":   "I'm Lisandro, a first-year Computer Engineering student at UADE. What draws me most is what you don't see: how a system receives a request, processes it, and stores the data. I'm currently learning backend development with Java and Python on top of SQL databases, and artificial intelligence and machine learning are next on my horizon. Every project I take on is an excuse to learn something new.",
+    "about.body":   "I'm Lisandro, a Computer Engineering student at UADE. What draws me most is what you don't see: how a system receives a request, processes it, and stores the data. I'm currently learning backend development with Java and Python on top of SQL databases, and artificial intelligence and machine learning are next on my horizon. Every project I take on is an excuse to learn something new.",
 
     "sheet.title":   "Character sheet",
     "sheet.class":   "Class",
@@ -107,7 +107,7 @@ const t = {
     "edu.title":            "Education",
     "edu.item1.date":       "2026 — In progress",
     "edu.item1.role":       "Computer Engineering",
-    "edu.item1.desc":       "First year. Personal focus on backend, databases, and programming.",
+    "edu.item1.desc":       "Personal focus on backend, databases, and programming.",
     "edu.certs.title":      "Certifications",
     "edu.certs.python.name":   "Introduction to Python Programming",
     "edu.certs.python.serial": "Serial No.: OA-2026-0222002281478",
